@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="368.53394"
+   height="347.45853"
+   viewBox="0 0 97.507938 91.931735"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="line.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.38128507"
+     inkscape:cx="-461.59688"
+     inkscape:cy="326.52734"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect360"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <path
+     style="opacity:0.455422;fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.33482;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+     d="M 0.7046558,91.26432 C 0.52959319,79.578904 0.35452992,67.893444 16.439184,58.505163 32.523838,49.116881 64.866079,42.026972 80.972423,32.770298 97.078767,23.513623 96.947469,12.090763 96.816166,0.66741002"
+     id="path358"
+     inkscape:path-effect="#path-effect360"
+     inkscape:original-d="M 0.7046558,91.26432 C 0.5298558,79.5789 0.3547958,67.89344 0.1794558,56.20726 32.523906,49.11719 64.866146,42.02728 97.210067,34.93668 97.079029,23.51362 96.94773,12.09076 96.816166,0.66741002"
+     sodipodi:nodetypes="cccc" />
+</svg>
