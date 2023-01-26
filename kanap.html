@@ -5,11 +5,12 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Sandra Petereau - portfolio</title>
+        <title>Sandra Petereau - Kanap</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
 		<script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
 
     <body>
@@ -19,8 +20,62 @@
             </a>
         </header>
 
-        <section class="carrousel__container">
-
+        <section id="carousel">
+            <i class="fa-solid fa-circle-chevron-left"></i>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+            <ul class="carousel--mobile">
+                <li class="carousel-mobile__item">
+                    <img src="images/local-site/kanap-mobile1.png" alt="page d'accueil du site Kanap">
+                </li>
+                <li class="carousel-mobile__item">
+                    <img src="images/local-site/kanap-mobile2.png" alt="produits vendus par le site Kanap">
+                </li>
+                <li class="carousel-mobile__item">
+                    <img src="images/local-site/kanap-mobile3.png" alt="page détaillée d'un produit du site Kanap">
+                </li>
+                <li class="carousel-mobile__item">
+                    <img src="images/local-site/kanap-mobile4.png" alt="page panier du site Kanap">
+                </li>
+            </ul>
+            <ul class="carousel--desktop">
+                <li class="carousel-desktop__item">
+                    <img src="images/local-site/kanap-desktop1.png" alt="page d'accueil du site Kanap">
+                </li>
+                <li class="carousel-mobile__item">
+                    <img src="images/local-site/kanap-desktop2.png" alt="produits vendus par le site Kanap">
+                </li>
+                <li class="carousel-mobile__item">
+                    <img src="images/local-site/kanap-desktop3.png" alt="page détaillée d'un produit du site Kanap">
+                </li>
+                <li class="carousel-mobile__item">
+                    <img src="images/local-site/kanap-desktop4.png" alt="page panier du site Kanap">
+                </li>
+            </ul>
+            <div class="carousel__description">
+                <div class="title">
+                    <h1>Kanap</h1>
+                    <div class="btn btn--circle btn--white">
+                        <a href="https://github.com/Jeanne4L/oc-kanap" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    Affichage dynamique des données grâce aux requêtes API
+                </p>
+                <div class="pagination">
+                    <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i>
+                </div>
+            </div>
         </section>
+
+        <footer>
+            <a href="https://github.com/Jeanne4L" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:sandra.petereau@outlook.fr">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </footer>
     </body>
 </html>

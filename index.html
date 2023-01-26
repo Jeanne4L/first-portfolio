@@ -8,18 +8,34 @@
         <title>Sandra Petereau - portfolio</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 		<script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <section>
             <header>
-                <img src="images/logo.png" alt="dessin abstrait représentant la polyvalence">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="logo abstrait représentant la polyvalence">
+                </a>
                 <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
                 <nav>
                     <ul>
-                        <li>portfolio</li>
-                        <li>contact</li>
-                        <li>parcours</li>
+                        <li>
+                            <a href="#portfolio">
+                                portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact">
+                                contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="career.html">
+                                parcours
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -32,12 +48,14 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla nisi, ornare quis velit non, hendrerit lobortis lacus. Integer leo odio, efficitur id velit sed, cursus aliquet quam. Aenean dapibus sapien at interdum blandit. Proin aliquam risus enim, ac laoreet justo volutpat et.
                 </p>
                 <div class="btn btn--circle btn--white">
-                    me contacter
+                    <a href="#contact">
+                        me contacter
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section id="portfolio">
             <h2>Mon portfolio</h2>
             <div class="grid">
                 <a href="https://jeanne4l.github.io/oc-booki/">
@@ -73,7 +91,7 @@
                         <span class="languages">HTML/CSS</span>
                         <figcaption>
                             <div>
-                                <h3>Ohmyfood</h3>
+                                <h3>La panthère</h3>
                                 <h4>Refonte d'un site avec pour objectif de meilleurs référencement et accessibilité</h4>
                             </div>
                             <i class="fa-solid fa-eye"></i>
@@ -139,13 +157,13 @@
         <section>
             <h2>Envie d'en savoir plus ?</h2>
             <div class="btn btn--circle btn--white">
-                <a href="journey.html">
+                <a href="career.html">
                     voir mon parcours
                 </a>
             </div>
         </section>
 
-        <section>
+        <section id="contact">
             <h2>Contactez-moi !</h2>
             <form action="form.php" method="post">
                 <input type="text" placeholder="Votre nom">
@@ -154,9 +172,9 @@
                 <input type="submit" value="envoyer" class="btn btn--rect btn--dark">
             </form>
         </section>
-        
+
         <footer>
-            <a href="https://github.com/Jeanne4L">
+            <a href="https://github.com/Jeanne4L" target="_blank">
                 <i class="fa-brands fa-github"></i>
             </a>
             <a href="mailto:sandra.petereau@outlook.fr">
