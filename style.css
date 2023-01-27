@@ -26,10 +26,6 @@ h1, h2 {
     font-weight: normal;
 }
 
-a {
-    text-decoration: none;
-    color: #006369;
-}
 h1 {
     font-size: 3rem;
 }
@@ -37,6 +33,16 @@ h2 {
     font-size: 2.7rem;
     text-align: center;
     margin-top: 0;
+}
+a {
+    text-decoration: none;
+    color: #006369;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style-type: none;
 }
 
 .bgc-gradient {
@@ -81,6 +87,7 @@ section {
 
 header {
     padding: 8px 0;
+    position: relative;
 }
 header .container {
     display: flex;
@@ -97,13 +104,39 @@ header i {
 }
 .ri-close-line {
     font-size: 1.5rem;
-}
-
-/*                      MODIF TEMPORAIRES            */
-header nav, .ri-close-line {
     display: none;
 }
-/*                     FIN MODIF TEMPORAIRES            */
+header nav {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    bottom: -250px;
+    height: 250px;
+    width: 250px;
+    border-bottom-left-radius: 300px;
+}
+header ul {
+    height: 100%;
+    padding: 20px 0 10px 15px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.grid__first {
+    grid-column: 3 / 5;
+    grid-row: 1/2;
+}
+.grid__second {
+    grid-column: 2 / 3;
+    grid-row: 2/3;
+}
+.grid__third {
+    grid-column: 4 / 5;
+    grid-row: 3/4;
+}
 
 /*                      PRESENTATION                    */
 .about {
