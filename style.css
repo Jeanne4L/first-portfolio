@@ -1,3 +1,206 @@
+@font-face {
+    font-family: 'Riesling';
+    src: url('Riesling.eot');
+    src: url('Riesling.eot?#iefix') format('embedded-opentype'),
+        url('Riesling.woff2') format('woff2'),
+        url('Riesling.woff') format('woff'),
+        url('Riesling.ttf') format('truetype'),
+        url('Riesling.svg#Riesling') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     margin: 0;
+    background-color: #F2F2F2;
+} 
+
+* {
+    font-family: 'Verdana';
+    color: #006369;
+    box-sizing: border-box;
+}
+h1, h2 {
+    font-family: 'Riesling', sans-serif;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #006369;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.7rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.bgc-gradient {
+    background:radial-gradient(circle at 100% 0%, rgba(14, 63, 64, 1) 0%, rgba(0, 99, 105, 1) 36%, rgba(14, 63, 64, 1) 76%, rgba(0, 99, 105, 1) 101%);
+}
+.about h1, .about h2 {
+    color: #FFF;
+}
+
+.profile-photo, #portfolio img  {
+    width: 100%;
+    height: auto;
+}
+section {
+    padding: 50px 0 50px 0;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.btn {
+    border: solid 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+.btn--circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.btn--white {
+    border-color: #FFF;
+    background-color: rgba(255,255,255, 0.27);
+}
+.btn--dark {
+    background-color: rgba(0, 99, 105, 0.27);
+}
+
+header {
+    padding: 8px 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    width: 30px;
+    height: auto;
+}
+header i {
+    color: #F2F2F2;
+    font-size: 1.1rem;
+}
+.ri-close-line {
+    font-size: 1.5rem;
+}
+
+/*                      MODIF TEMPORAIRES            */
+header nav, .ri-close-line {
+    display: none;
+}
+/*                     FIN MODIF TEMPORAIRES            */
+
+/*                      PRESENTATION                    */
+.about {
+    padding-top: 0;
+    border-radius: 0 0 35px 35px;
+}
+.about .container:not(header .container) {
+    text-align: center;
+}
+.about h1 {
+    margin: 25px 0 0 0;
+}
+.about h2 {
+    margin-top: -10px;
+}
+.about .btn a, .more .btn a {
+    color: white;
+}
+
+/*                      PORTFOLIO                    */
+#portfolio {
+    padding-bottom: 30px;
+}
+figure {
+    position: relative;
+    width: 95%;
+    margin: 0 auto 35px auto;
+    overflow: hidden;
+}
+.languages i:not(.fa-eye) {
+    font-size: 1.4rem;
+    color: #F25C05;
+}
+.languages {
+    padding: 10px 5px;
+    position: absolute;
+    top: 0;
+    text-align-last: right;
+    right: 0;
+    width: 65px;
+    height: 65px;
+    box-shadow: 0px 5px 15px 5px rgb(0 0 0 / 18%);
+    border-bottom-left-radius: 90px;
+}
+figure h3 {
+    margin: 5px 0 5px 0;
+    font-size: 0.9rem;
+}
+figure h4 {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+.fa-eye {
+    font-size: 1.2rem;
+    color: #F25C05;
+}
+
+/*                      MORE INFORMATION                    */
+.more {
+    text-align: center;
+}
+.more h2 {
+    width: 60%;
+    margin: auto;
+    color: #FFF;
+    margin-bottom: 220px;
+}
+
+/*                           CONTACT                         */
+#contact {
+    text-align: center
+}
+form {
+    width: 90%;
+    margin: auto;
+}
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 0;
+    border: solid 1px rgba(0, 99, 105, 0.2);
+    font-size: 1.1rem;
+}
+::placeholder {
+    color: rgba(0, 99, 105, 0.45);
+}
+
+/*                           FOOTER                         */
+footer {
+    background-color:  #0E3E40;
+    padding: 20px 0 40px 0;
+    text-align: center;
+}
+footer i {
+    font-size: 1.3rem;
+    color: rgba(245,245,245, 0.8);
+    padding: 5px;
 }

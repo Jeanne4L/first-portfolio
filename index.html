@@ -8,45 +8,48 @@
         <title>Sandra Petereau - portfolio</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 		<script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <section>
+        <section class="about bgc-gradient">
             <header>
-                <a href="index.html">
-                    <img src="images/logo.png" alt="logo abstrait représentant la polyvalence">
-                </a>
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-xmark"></i>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#portfolio">
-                                portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact">
-                                contact
-                            </a>
-                        </li>
-                        <li>
-                            <a href="career.html">
-                                parcours
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="container">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="logo abstrait représentant la polyvalence">
+                    </a>
+                    <i class="ri-close-line"></i>
+                    <i class="ri-menu-line"></i>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#portfolio">
+                                    portfolio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact">
+                                    contact
+                                </a>
+                            </li>
+                            <li>
+                                <a href="career.html">
+                                    parcours
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
 
-            <img src="images/profile-picture.jpg" alt="photo de Sandra Petereau">
-            <div class="presentation">
+            <img src="images/profile-picture.jpg" alt="photo de Sandra Petereau" class="profile-photo">
+            <div class="container">
                 <h1>Sandra Petereau</h1>
                 <h2>développeuse web</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla nisi, ornare quis velit non, hendrerit lobortis lacus. Integer leo odio, efficitur id velit sed, cursus aliquet quam. Aenean dapibus sapien at interdum blandit. Proin aliquam risus enim, ac laoreet justo volutpat et.
-                </p>
+                <!-- <p>
+                     
+                </p> -->
                 <div class="btn btn--circle btn--white">
                     <a href="#contact">
                         me contacter
@@ -61,100 +64,93 @@
                 <a href="https://jeanne4l.github.io/oc-booki/">
                     <figure>
                         <img src="images/projects-render/booki.png" alt="captures d'écran du site Booki">
-                        <span class="languages">HTML/CSS</span>
                         <figcaption>
-                            <div>
-                                <h3>Booki</h3>
-                                <h4>Intégration d'une maquette en HTML et CSS</h4>
+                            <div class="languages">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
                             </div>
-                            <i class="fa-brands fa-html5"></i>
-                            <i class="fa-brands fa-css3-alt"></i>
+                            <h3>Booki</h3>
+                            <h4>Intégration d'une maquette en HTML et CSS</h4>
                         </figcaption>
                     </figure>
                 </a>
                 <a href="https://jeanne4l.github.io/oc-oh-my-food/">
                     <figure>
                         <img src="images/projects-render/ohmyfood.png" alt="captures d'écran du site Oh my food">
-                        <span class="languages">Sass</span>
                         <figcaption>
-                            <div>
-                                <h3>Ohmyfood</h3>
-                                <h4>Réalisation d'animations avec Sass</h4>
+                            <div class="languages">
+                                <i class="fa-brands fa-sass"></i>
                             </div>
-                            <i class="fa-brands fa-sass"></i>
+                            <h3>Ohmyfood</h3>
+                            <h4>Réalisation d'animations avec Sass</h4>
                         </figcaption>
                     </figure>
                 </a>
                 <a href="https://jeanne4l.github.io/oc-la-panthere/">
                     <figure>
                         <img src="images/projects-render/la-panthere.png" alt="captures d'écran du site La panthère">
-                        <span class="languages">HTML/CSS</span>
                         <figcaption>
-                            <div>
-                                <h3>La panthère</h3>
-                                <h4>Refonte d'un site avec pour objectif de meilleurs référencement et accessibilité</h4>
+                            <div class="languages">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-solid fa-person"></i>
                             </div>
-                            <i class="fa-solid fa-eye"></i>
-                            <i class="fa-solid fa-person"></i>
+                            <h3>La panthère</h3>
+                            <h4>Refonte d'un site afin d'améliorer le référencement et l'accessibilité</h4>
                         </figcaption>
                     </figure>
                 </a>
                 <a href="kanap.html">
                     <figure>
                         <img src="images/projects-render/kanap.png" alt="captures d'écran du site Kanap">
-                        <span class="languages">JS</span>
                         <figcaption>
-                            <div>
-                                <h3>Kanap</h3>
-                                <h4>Affichage dynamique de données grâce aux requêtes API</h4>
+                            <div class="languages">
+                                <i class="fa-brands fa-js"></i>
                             </div>
-                            <i class="fa-brands fa-js"></i>
+                            <h3>Kanap</h3>
+                            <h4>Affichage dynamique de données grâce aux requêtes API</h4>
                         </figcaption>
                     </figure>
                 </a>
                 <a href="https://codepen.io/Jeanne4L/pen/RwJPQbP?editors=0010">
                     <figure>
                         <img src="images/projects-render/weather-app.png" alt="captures d'écran d'une application météo">
-                        <span class="languages">JS</span>
                         <figcaption>
-                            <div>
-                                <h3>Application météo</h3>
-                                <h4>Récupération des données météo grâce aux requêtes API</h4>
+                            <div class="languages">
+                                <i class="fa-brands fa-js"></i>
                             </div>
-                            <i class="fa-brands fa-js"></i>
+                            <h3>Application météo</h3>
+                            <h4>Récupération des données météo grâce aux requêtes API</h4>
                         </figcaption>
                     </figure>
                 </a>
                 <a href="https://www.mil-mo.fr/">
                     <figure>
                         <img src="images/projects-render/milmo.png" alt="captures d'écran du site Mil'mo">
-                        <span class="languages">WordPress</span>
                         <figcaption>
-                            <div>
-                                <h3>Mil'mo</h3>
-                                <h4>Création d'un blog avec WordPress</h4>
+                            <div class="languages">
+                                <i class="fa-brands fa-wordpress-simple"></i>
                             </div>
-                            <i class="fa-brands fa-wordpress-simple"></i>
+                            <h3>Mil'mo</h3>
+                            <h4>Réalisation d'un blog avec WordPress</h4>
                         </figcaption>
                     </figure>
                 </a>
                 <a href="leslie-fessel.html">
                     <figure>
                         <img src="images/projects-render/leslie-fessel.png" alt="captures d'écran du site de Leslie Fessel (psychomotricienne)">
-                        <span class="languages">PHP</span>
                         <figcaption>
-                            <div>
-                                <h3>Leslie Fessel - psychomotricienne</h3>
-                                <h4>Création d'un site vitrine</h4>
+                            <div class="languages">
+                                <i class="fa-brands fa-php"></i>
                             </div>
-                            <i class="fa-brands fa-php"></i>
+                            <h3>Leslie Fessel - psychomotricienne</h3>
+                            <h4>Réalisation d'un site vitrine</h4>
                         </figcaption>
                     </figure>
                 </a>
             </div>
         </section>
 
-        <section>
+        <section class="more bgc-gradient">
             <h2>Envie d'en savoir plus ?</h2>
             <div class="btn btn--circle btn--white">
                 <a href="career.html">

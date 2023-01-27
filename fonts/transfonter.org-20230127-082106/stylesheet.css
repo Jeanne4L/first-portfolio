@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Riesling';
+    src: url('Riesling.eot');
+    src: url('Riesling.eot?#iefix') format('embedded-opentype'),
+        url('Riesling.woff2') format('woff2'),
+        url('Riesling.woff') format('woff'),
+        url('Riesling.ttf') format('truetype'),
+        url('Riesling.svg#Riesling') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
