@@ -9,71 +9,79 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
         <link rel="stylesheet" href="style.css">
-		<script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     </head>
 
-    <body>
-        <header>
-            <a href="index.html">
-                <img src="images/logo.png" alt="logo abstrait représentant la polyvalence">
-            </a>
-        </header>
+    <body class="kanap">
+        <main class="bgc-gradient">
+            <div class="container">
+                <header>
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="logo abstrait représentant la polyvalence">
+                    </a>
+                </header>
+            </div>
 
-        <section id="carousel">
-            <i class="fa-solid fa-circle-chevron-left"></i>
-            <i class="fa-solid fa-circle-chevron-right"></i>
-            <ul class="carousel--mobile">
-                <li class="carousel-mobile__item">
-                    <img src="images/local-site/kanap-mobile1.png" alt="page d'accueil du site Kanap">
-                </li>
-                <li class="carousel-mobile__item">
-                    <img src="images/local-site/kanap-mobile2.png" alt="produits vendus par le site Kanap">
-                </li>
-                <li class="carousel-mobile__item">
-                    <img src="images/local-site/kanap-mobile3.png" alt="page détaillée d'un produit du site Kanap">
-                </li>
-                <li class="carousel-mobile__item">
-                    <img src="images/local-site/kanap-mobile4.png" alt="page panier du site Kanap">
-                </li>
-            </ul>
-            <ul class="carousel--desktop">
-                <li class="carousel-desktop__item">
-                    <img src="images/local-site/kanap-desktop1.png" alt="page d'accueil du site Kanap">
-                </li>
-                <li class="carousel-mobile__item">
-                    <img src="images/local-site/kanap-desktop2.png" alt="produits vendus par le site Kanap">
-                </li>
-                <li class="carousel-mobile__item">
-                    <img src="images/local-site/kanap-desktop3.png" alt="page détaillée d'un produit du site Kanap">
-                </li>
-                <li class="carousel-mobile__item">
-                    <img src="images/local-site/kanap-desktop4.png" alt="page panier du site Kanap">
-                </li>
-            </ul>
-            <div class="carousel__description">
-                <div class="title">
-                    <h1>Kanap</h1>
-                    <div class="btn btn--circle btn--white">
-                        <a href="https://github.com/Jeanne4L/oc-kanap" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
+            <section id="carousel">
+                <div class="chevron-left">
+                    <i class="ri-arrow-left-s-line"></i>
+                </div>
+                <div class="chevron-right">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+                <ul class="carousel--mobile">
+                    <li class="carousel-mobile__item">
+                        <img src="images/local-site/kanap-mobile1.png" alt="page d'accueil du site Kanap">
+                    </li>
+                    <li class="carousel-mobile__item">
+                        <img src="images/local-site/kanap-mobile2.png" alt="produits vendus par le site Kanap">
+                    </li>
+                    <li class="carousel-mobile__item">
+                        <img src="images/local-site/kanap-mobile3.png" alt="page détaillée d'un produit du site Kanap">
+                    </li>
+                    <li class="carousel-mobile__item">
+                        <img src="images/local-site/kanap-mobile4.png" alt="page panier du site Kanap">
+                    </li>
+                </ul>
+                <ul class="carousel--desktop">
+                    <li class="carousel-desktop__item">
+                        <img src="images/local-site/kanap-desktop1.png" alt="page d'accueil du site Kanap">
+                    </li>
+                    <li class="carousel-mobile__item">
+                        <img src="images/local-site/kanap-desktop2.png" alt="produits vendus par le site Kanap">
+                    </li>
+                    <li class="carousel-mobile__item">
+                        <img src="images/local-site/kanap-desktop3.png" alt="page détaillée d'un produit du site Kanap">
+                    </li>
+                    <li class="carousel-mobile__item">
+                        <img src="images/local-site/kanap-desktop4.png" alt="page panier du site Kanap">
+                    </li>
+                </ul>
+                <div class="carousel__description">
+                    <div class="title">
+                        <h1>Kanap</h1>
+                        <div class="btn btn--circle btn--white">
+                            <a href="https://github.com/Jeanne4L/oc-kanap" target="_blank">
+                                <i class="ri-github-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>
+                        Affichage dynamique des données grâce aux requêtes API
+                    </p>
+                    <div class="pagination">
+                        <i class="ri-checkbox-blank-circle-fill white"></i><i class="ri-checkbox-blank-circle-fill"></i><i class="ri-checkbox-blank-circle-fill"></i><i class="ri-checkbox-blank-circle-fill"></i>
                     </div>
                 </div>
-                <p>
-                    Affichage dynamique des données grâce aux requêtes API
-                </p>
-                <div class="pagination">
-                    <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <footer>
+        <footer class="center">
             <a href="https://github.com/Jeanne4L" target="_blank">
-                <i class="fa-brands fa-github"></i>
+                <i class="ri-github-fill"></i>
             </a>
             <a href="mailto:sandra.petereau@outlook.fr">
-                <i class="fa-solid fa-envelope"></i>
+                <i class="ri-mail-fill"></i>
             </a>
         </footer>
     </body>

@@ -231,7 +231,7 @@ footer {
     padding: 20px 0 40px 0;
 }
 footer i {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     color: rgba(245,245,245, 0.8);
     padding: 5px;
 }
@@ -349,4 +349,97 @@ footer i {
 
 .ri-arrow-up-s-fill, .column {
     display: none;
+}
+
+/*                                                          */
+/*                        KANAP PAGE                        */
+/*                                                          */
+.carousel--desktop {
+    display: none;
+}
+#carousel {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+.carousel--mobile {
+    width: 400%;
+    display: flex;
+}
+.carousel--mobile img {
+    width: 100%;
+}
+#carousel ul {
+    margin: 0;
+}
+#carousel li {
+    display: inline-flex;
+}
+
+.chevron-right, .chevron-left {
+    border: solid 3px #006369;
+    border-radius: 30px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ri-arrow-left-s-line, .ri-arrow-right-s-line {
+    font-size: 1.8rem;
+}
+#carousel .chevron-left  {
+    left: 5%;
+}
+#carousel .chevron-right {
+    right: 5%;
+}
+
+
+.carousel__description {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(14, 63, 64, .45);
+    text-align: center;
+    padding: 8px;
+}
+.carousel__description .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel__description h1 {
+    margin: 0;
+}
+.carousel__description h1, .carousel__description p, .btn .ri-github-fill {
+    color: white;
+}
+.carousel__description p {
+    font-size: 0.9rem;
+    margin: 5px auto 30px auto;
+}
+.carousel__description .btn {
+    width: 35px;
+    height: 35px;
+    margin: 0 0 0 5px;
+    border-width: 2px;
+}
+.carousel__description .btn a {
+    display: inline-flex;
+}
+.btn .ri-github-fill {
+    font-size: 1.4rem;
+}
+
+.ri-checkbox-blank-circle-fill {
+    font-size: 0.8rem;
+}
+.white {
+    color: white;
+}
+
+.kanap footer i {
+    color:#006369;
 }
