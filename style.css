@@ -1,15 +1,19 @@
 @font-face {
     font-family: 'Riesling';
-    src: url('Riesling.eot');
-    src: url('Riesling.eot?#iefix') format('embedded-opentype'),
-        url('Riesling.woff2') format('woff2'),
-        url('Riesling.woff') format('woff'),
-        url('Riesling.ttf') format('truetype'),
-        url('Riesling.svg#Riesling') format('svg');
+    src: url('fonts/riesling/Riesling.eot');
+    src: url('fonts/riesling/Riesling.eot?#iefix') format('embedded-opentype'),
+        url('fonts/riesling/Riesling.woff2') format('woff2'),
+        url('fonts/riesling/Riesling.woff') format('woff'),
+        url('fonts/riesling/Riesling.ttf') format('truetype'),
+        url('fonts/riesling/Riesling.svg#Riesling') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
+/*                                                          */
+/*                        INDEX PAGE                        */
+/*                                                          */
 
 body {
     margin: 0;
@@ -43,6 +47,9 @@ ul {
 }
 li {
     list-style-type: none;
+}
+.center {
+    text-align: center;
 }
 
 .bgc-gradient {
@@ -143,9 +150,6 @@ header ul {
     padding-top: 0;
     border-radius: 0 0 35px 35px;
 }
-.about .container:not(header .container) {
-    text-align: center;
-}
 .about h1 {
     margin: 25px 0 0 0;
 }
@@ -171,15 +175,16 @@ figure {
     color: #F25C05;
 }
 .languages {
-    padding: 10px 5px;
     position: absolute;
-    top: 0;
-    text-align-last: right;
-    right: 0;
-    width: 65px;
-    height: 65px;
+    top: 5px;
+    right: 5px;
+    width: 55px;
+    height: 55px;
     box-shadow: 0px 5px 15px 5px rgb(0 0 0 / 18%);
-    border-bottom-left-radius: 90px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 figure h3 {
     margin: 5px 0 5px 0;
@@ -196,9 +201,6 @@ figure h4 {
 }
 
 /*                      MORE INFORMATION                    */
-.more {
-    text-align: center;
-}
 .more h2 {
     width: 60%;
     margin: auto;
@@ -207,9 +209,6 @@ figure h4 {
 }
 
 /*                           CONTACT                         */
-#contact {
-    text-align: center
-}
 form {
     width: 90%;
     margin: auto;
@@ -230,10 +229,124 @@ input, textarea {
 footer {
     background-color:  #0E3E40;
     padding: 20px 0 40px 0;
-    text-align: center;
 }
 footer i {
     font-size: 1.3rem;
     color: rgba(245,245,245, 0.8);
     padding: 5px;
+}
+
+
+/*                                                          */
+/*                       CAREER PAGE                        */
+/*                                                          */
+.career a, .career h1, .career h2, .career p, .career i {
+    color: white;
+}
+#twist span {
+    color: #015459;
+}
+
+.career__light-parts {
+    background-color: #31aaa8;
+    border-radius: 20px;
+    padding: 35px 0 15px 0;
+}
+.career section:not(#beginning) { /* si line 0 padding haut bas, sinon 50 bas */
+    padding: 0;
+}
+#beginning  {
+    padding-bottom: 0;
+}
+.career main {
+    padding-bottom: 30px;
+}
+
+.line-to-right, .line-to-left {
+    display: block;
+    width: 75%;
+    margin: 15px auto;
+}
+
+.career h2 {
+    font-size: 2rem;
+    width: 90%;
+    margin: auto;
+}
+.career p {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+}
+.career h2 i {
+    font-size: 1.2rem;
+}
+
+#beginning h2, #new-start h2 {
+    text-align: left;
+}
+#twist h2, .to-be-continued {
+    text-align: right;
+}
+#beginning .career__light-parts p, #twist .career__light-parts p, #new-start .career__light-parts p:not(.box p) {
+    text-align: justify;
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.career img:not(header img):not(.comics img):not(.line-to-right):not(.line-to-left) {
+    width: 90%;
+    margin: 5px auto 8px auto;
+}
+
+.comics {
+    margin-bottom: 40px;
+}
+.box {
+    width: 95%;
+    margin: auto;
+    background-color: #F2F2F2;
+    padding: 8px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.comics img {
+    width: 100%;
+}
+.box p, .career footer i  {
+    color:#006369;
+}
+.box p {
+    margin-bottom: 0;
+}
+.box1, .box3 {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: right;
+}
+.box .bubble-line {
+    width: 35px;
+    height: 3px;
+    background-color: #006369;
+    position: absolute;
+}
+.box1 .bubble-line, .box3 .bubble-line {
+    left: 55%;
+    bottom: 70%;
+    transform: rotate(125deg);
+}
+.box2 .bubble-line, .box4 .bubble-line {
+    left: 35%;
+    bottom: 55%;
+    transform: rotate(45deg);
+}
+#new-start .btn {
+    margin: 40px auto 35px auto;
+}
+
+.ri-arrow-up-s-fill, .column {
+    display: none;
 }
