@@ -146,6 +146,23 @@ header ul {
 }
 
 /*                      PRESENTATION                    */
+.img-container {
+    display: flex;
+    overflow: hidden;
+}
+.profile-photo {
+    animation: scale 900ms;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .about {
     padding-top: 0;
     border-radius: 0 0 35px 35px;
@@ -165,26 +182,48 @@ header ul {
     padding-bottom: 30px;
 }
 figure {
-    position: relative;
     width: 95%;
     margin: 0 auto 35px auto;
-    overflow: hidden;
 }
-.languages i:not(.fa-eye) {
-    font-size: 1.4rem;
-    color: #F25C05;
+figure img {
+    animation: scale 900ms;
+}
+figure .img-container {
+    position: relative;
+}
+.languages i:not(.fa-eye):not(.fa-php) {
+    font-size: 1.7rem;
+}
+.fa-eye {
+    font-size: 1.2rem;
+}
+.fa-php {
+    font-size: 1.9rem;
+}
+.languages i {
+    z-index: 1;
+    color: white;
+    margin-left: 5px;
+}
+.languages, .triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
 }
 .languages {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 55px;
-    height: 55px;
-    box-shadow: 0px 5px 15px 5px rgb(0 0 0 / 18%);
-    border-radius: 50px;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 15px;
+}
+.triangle {
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-bottom : 100px solid rgba(14, 63, 64, .45);
+    border-left : 140px solid transparent;
 }
 figure h3 {
     margin: 5px 0 5px 0;
@@ -194,10 +233,6 @@ figure h4 {
     margin-top: 0;
     font-weight: normal;
     font-size: 0.9rem;
-}
-.fa-eye {
-    font-size: 1.2rem;
-    color: #F25C05;
 }
 
 /*                      MORE INFORMATION                    */
