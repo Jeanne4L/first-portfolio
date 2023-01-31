@@ -53,10 +53,18 @@ li {
 }
 
 .bgc-gradient {
-    background:radial-gradient(circle at 100% 0%, rgba(14, 63, 64, 1) 0%, rgba(0, 99, 105, 1) 36%, rgba(14, 63, 64, 1) 76%, rgba(0, 99, 105, 1) 101%);
+    background: radial-gradient(circle at 100% 0%, rgba(14, 63, 64, 1) 0%, rgba(0, 99, 105, 1) 36%, rgba(14, 63, 64, 1) 76%, rgba(0, 99, 105, 1) 101%);
 }
 .about h1, .about h2 {
     color: #FFF;
+}
+.overlay {
+    position: fixed;
+    z-index: 3;
+    top: 48.78px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
 }
 
 .profile-photo, #portfolio img  {
@@ -106,8 +114,8 @@ section {
     height: 53px;
 }
 .border-btn--rect {
-    width: 500px;
-    height:500px;
+    width: 100%;
+    height:100px;
     transform: rotate(0deg);
     background: linear-gradient(to right, rgba(0,99,105, .2) 20%, rgba(0,99,105, .7) 40%, rgba(0,99,105, 1) 50%, rgba(0,99,105, 1) 55%, rgba(0,99,105, .7) 70%, rgba(0,99,105, .2) 100%);
     background-size: 200% auto;
@@ -143,7 +151,7 @@ section {
     background-color: #B1CCCD;
     display: flex;
     justify-content: center;
-    width: 95%;
+    width: 98%;
     margin-top: 8px;
 }
 
@@ -165,20 +173,48 @@ header i {
     color: #F2F2F2;
     font-size: 1.1rem;
 }
-.ri-close-line {
-    font-size: 1.5rem;
+.hidden {
     display: none;
 }
-header nav {
-    display: none;
+.ri-close-line {
+    font-size: 1.5rem;
+}
+.closed-menu {
+    animation: hide 400ms linear forwards;
+}
+.opened-menu {
+    animation: display 400ms linear;
+}
+.menu {
     position: absolute;
+    z-index: 4;
     right: 0;
     background-color: white;
     bottom: -250px;
     height: 250px;
     width: 250px;
     border-bottom-left-radius: 300px;
+    transform-origin: top right;
 }
+
+@keyframes display {
+    0% {
+        transform: translateX(250px) scale(0);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes hide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(250px) scale(0);
+    }
+}
+
 header ul {
     height: 100%;
     padding: 20px 0 10px 15px;
@@ -332,11 +368,24 @@ footer i {
 /*                                                          */
 /*                       CAREER PAGE                        */
 /*                                                          */
-.career a, .career h1, .career h2, .career p, .career i {
+.career a:not(.menu a), .career h1, .career h2, .career p, .career i {
     color: white;
 }
 #twist span {
     color: #015459;
+}
+
+.career-grid__first {
+    grid-column: 1 / 5;
+    grid-row: 1/2;
+}
+.career-grid__second {
+    grid-column: 2 / 4;
+    grid-row: 2/3;
+}
+.career-grid__third {
+    grid-column: 3 / 6;
+    grid-row: 3/4;
 }
 
 .career__light-parts {
