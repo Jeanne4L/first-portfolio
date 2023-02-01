@@ -4,6 +4,7 @@ let menu = document.querySelector('.menu');
 let overlay = document.querySelector('.overlay');
 let downArrows = document.querySelectorAll('.ri-arrow-down-s-fill');
 let upArrows = document.querySelectorAll('.ri-arrow-up-s-fill');
+let header = document.querySelector('header');
 
 // display and hide menu
 function displayMenu() {
@@ -40,8 +41,9 @@ function displayMenu() {
         }
     })
 }
-displayMenu();
-
+if(openMenuBtn) {
+    displayMenu();
+}
 
 // display career parts
 function displayCareerParts() {
@@ -89,3 +91,13 @@ displayCareerParts();
 
 
 // change header color with scroll
+function changeHeaderColor() {
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset === 0) {
+            header.style.backgroundColor = 'transparent';
+        } else {
+            header.style.backgroundColor = '#0E3E40';
+        }
+    })
+}
+changeHeaderColor();
