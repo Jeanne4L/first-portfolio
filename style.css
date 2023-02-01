@@ -34,7 +34,7 @@ h1 {
     font-size: clamp(3rem, 0.6rem + 12vw, 4.2rem);
 }
 h2 {
-    font-size: clamp(3rem, 2rem + 5vw, 3.5rem);
+    font-size: clamp(2.875rem, 1.625rem + 6.25vw, 3.5rem);
     text-align: center;
     margin-top: 0;
 }
@@ -140,7 +140,7 @@ section:not(.career section):not(.about) {
     height: 100px;
     border-radius: 50px;
 }
-.about .btn, .more .btn {
+.about .btn, .more .btn, .kanap .btn {
     background-color: #4E7778;
     transform: rotate(45deg);
     display: flex;
@@ -278,9 +278,9 @@ figure {
     width: 95%;
     margin: 0 auto 35px auto;
 }
-figure img {
+/* figure img {
     animation: scale 900ms;
-}
+} */
 figure .img-container {
     position: relative;
 }
@@ -529,104 +529,45 @@ footer i {
 .kanap main {
     padding-top: 48.78px;
 }
-.carousel--desktop {
-    display: none;
-}
-#carousel {
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-}
-.carousel--mobile {
-    width: 400%;
-    display: flex;
-}
-.carousel--mobile img {
-    width: 100%;
-}
-#carousel ul {
-    margin: 0;
-}
-#carousel li {
-    display: inline-flex;
-}
-
-.chevron-right, .chevron-left {
-    border: solid 3px #006369;
-    border-radius: 30px;
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    top: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.ri-arrow-left-s-line, .ri-arrow-right-s-line {
-    font-size: 1.8rem;
-}
-#carousel .chevron-left  {
-    left: 5%;
-}
-#carousel .chevron-right {
-    right: 5%;
-}
-
-
-.carousel__description {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(14, 63, 64, .45);
-    text-align: center;
-    padding: 8px;
-}
-.carousel__description .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.carousel__description h1 {
-    margin: 0;
-}
-.carousel__description h1, .carousel__description p, .btn .ri-github-fill {
+.kanap h1, .kanap p {
     color: white;
 }
-.carousel__description p {
+.kanap p {
     font-size: 0.9rem;
-    margin: 5px auto 30px auto;
-}
-.carousel__description .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(45deg);
-    width: 34px;
-    height: 34px;
-    background-color: #8C9A9C;
-}
-.carousel__description .shine-container-btn {
-    width: 38px;
-    height: 38px;
-    margin: 0 5px;
-}
-.carousel__description .btn a {
-    display: inline-flex;
-}
-.btn .ri-github-fill {
-    font-size: 1.4rem;
 }
 
-.ri-checkbox-blank-circle-fill {
-    font-size: 0.8rem;
+.kanap h1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
 }
-.white {
+.kanap h1 a {
+    display: inline-flex;
+}
+.kanap .shine-container-btn {
+    width: 44px;
+    height: 44px;
+    margin: 0 0 0 8px;
+}
+.kanap .btn {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+}
+.kanap h1 .ri-code-s-slash-fill {
+    font-size: 2.2rem;
     color: white;
 }
 
 .kanap footer i {
     color:#006369;
 }
-
+.kanap__grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
 
 .hidden {
     display: none;
