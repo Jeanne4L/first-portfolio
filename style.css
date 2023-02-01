@@ -353,7 +353,25 @@ input, textarea {
     color: rgba(0, 99, 105, 0.45);
 }
 
-/*                           FOOTER                         */
+/*                          ANCHOR TOP OF PAGE                 */
+.anchor-top {
+    border: solid 2px #0E3E40;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 100px;
+    right: 15px;
+}
+.ri-arrow-up-s-line {
+    font-size: 2.1rem;
+    color: #0E3E40;
+}
+
+/*                           FOOTER                            */
 footer {
     background-color:  #0E3E40;
     padding: 20px 0 40px 0;
@@ -368,7 +386,7 @@ footer i {
 /*                                                          */
 /*                       CAREER PAGE                        */
 /*                                                          */
-.career a:not(.menu a), .career h1, .career h2, .career p, .career i {
+.career a:not(.menu a), .career h1, .career h2, .career p, .career i:not(.anchor-top i) {
     color: white;
 }
 #twist span {
