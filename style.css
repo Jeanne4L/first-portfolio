@@ -71,12 +71,12 @@ li {
     width: 100%;
     height: auto;
 }
-section {
-    padding: 50px 0 50px 0;
-}
 .container {
     width: 90%;
     margin: auto;
+}
+section:not(.career section):not(.about) {
+    padding: 50px 0;
 }
 
 /*                          BUTTON                               */
@@ -171,10 +171,7 @@ header img {
 }
 header i {
     color: #F2F2F2;
-    font-size: 1.1rem;
-}
-.hidden {
-    display: none;
+    font-size: 1.3rem;
 }
 .ri-close-line {
     font-size: 1.5rem;
@@ -256,7 +253,7 @@ header ul {
 }
 
 .about {
-    padding-top: 0;
+    padding-bottom: 50px;
     border-radius: 0 0 35px 35px;
 }
 .about h1 {
@@ -392,18 +389,20 @@ footer i {
     background-color: #31aaa8;
     border-radius: 20px;
     padding: 35px 0 15px 0;
+    margin-bottom: 50px;
 }
 #new-start .career__light-parts {
     padding-bottom: 50px;
 }
-.career section:not(#beginning) { /* si line 0 padding haut bas, sinon 50 bas */
-    padding: 0;
-}
 #beginning  {
-    padding-bottom: 0;
+    padding-top: 50px;
 }
 .career main {
     padding-bottom: 30px;
+}
+.career__illustration {
+    width: 90%;
+    margin: 30px auto 8px auto;
 }
 
 .line-to-right, .line-to-left {
@@ -440,10 +439,6 @@ footer i {
 .column {
     display: flex;
     flex-direction: column-reverse;
-}
-.career img:not(header img):not(.comics img):not(.line-to-right):not(.line-to-left) {
-    width: 90%;
-    margin: 5px auto 8px auto;
 }
 
 .comics {
@@ -498,9 +493,31 @@ footer i {
     width: 90%;
     margin: 50px auto 50px auto;
 }
+.column {
+    transform-origin: bottom;
+}
+.disappear {
+    animation: shrink 400ms ease-in forwards;
+}
+.appear {
+    animation: grow 400ms ease-in forwards;
+}
 
-.ri-arrow-up-s-fill, .column {
-    display: none;
+@keyframes shrink {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(0);
+    }
+}
+@keyframes grow {
+    0% {
+        transform: rotate(0deg) scale(0);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
 }
 
 /*                                                          */
@@ -602,4 +619,9 @@ footer i {
 
 .kanap footer i {
     color:#006369;
+}
+
+
+.hidden {
+    display: none;
 }
