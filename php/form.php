@@ -41,12 +41,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>
-            Sandra Petereau - 
-            <?php if(mail($to, $subject, $message, $headers)) {
-                    echo 'message envoyé';
-                } else {
-                    echo 'erreur d\'envoi';
-                }?>
+            Sandra Petereau - Message
         </title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
