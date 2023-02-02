@@ -7,7 +7,12 @@ let upArrows = document.querySelectorAll('.ri-arrow-up-s-fill');
 let header = document.querySelector('header');
 let anchor = document.querySelector('.anchor-top');
 
+
 // display and hide menu
+if(openMenuBtn) {
+    displayMenu();
+}
+
 function displayMenu() {
     let isOpenedMenu = false;
 
@@ -42,9 +47,7 @@ function displayMenu() {
         }
     })
 }
-if(openMenuBtn) {
-    displayMenu();
-}
+
 
 // display career parts
 function displayCareerParts() {
@@ -104,3 +107,28 @@ function changeHeaderColor() {
     })
 }
 changeHeaderColor();
+
+let nameInput = document.querySelector('#name');
+let emailInput = document.querySelector('#email');
+let message = document.querySelector('#message');
+let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+nameInput.addEventListener('change', (e)=> {
+    if(/[^A-Za-zéêèÉÊÈ\s]/.test(e.target.value)){
+        document.querySelector('#name__error').classList.remove('hidden');
+        nameInput.classList.add('error');
+    } else {
+        document.querySelector('#name__error').classList.add('hidden');
+        nameInput.classList.remove('error');
+    }
+});
+
+emailInput.addEventListener('change', (e)=> {
+    if(emailRegex.test(e.target.value)){
+        document.querySelector('#email__error').classList.add('hidden');
+        emailInput.classList.remove('error');
+    } else {
+        document.querySelector('#email__error').classList.remove('hidden');
+        emailInput.classList.add('error');
+    }
+});

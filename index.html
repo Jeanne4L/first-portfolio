@@ -75,14 +75,13 @@
                         <div class="img-container">
                             <img src="images/projects-render/booki.png" alt="captures d'écran du site Booki">
                             <div class="languages">
-                                <div class="triangle"></div>
                                 <i class="fa-brands fa-html5"></i>
                                 <i class="fa-brands fa-css3-alt"></i>
                             </div>
                         </div>
                         <figcaption>
                             <h3>Booki</h3>
-                            <h4>Intégration d'une maquette en HTML et CSS</h4>
+                            <h4>Projet scolaire: Intégration d'une maquette en HTML et CSS</h4>
                         </figcaption>
                     </figure>
                 </a>
@@ -91,13 +90,12 @@
                         <div class="img-container">
                             <img src="images/projects-render/ohmyfood.png" alt="captures d'écran du site Oh my food">
                             <div class="languages">
-                                <div class="triangle"></div>
                                 <i class="fa-brands fa-sass"></i>
                             </div>
                         </div>
                         <figcaption>
                             <h3>Ohmyfood</h3>
-                            <h4>Réalisation d'animations avec Sass</h4>
+                            <h4>Projet scolaire: Réalisation d'animations avec Sass</h4>
                         </figcaption>
                     </figure>
                 </a>
@@ -106,14 +104,13 @@
                         <div class="img-container">
                             <img src="images/projects-render/la-panthere.png" alt="captures d'écran du site La panthère">
                             <div class="languages">
-                                <div class="triangle"></div>
                                 <i class="fa-solid fa-eye"></i>
                                 <i class="fa-solid fa-person"></i>
                             </div>
                         </div>
                         <figcaption>
                             <h3>La panthère</h3>
-                            <h4>Refonte d'un site afin d'améliorer le référencement et l'accessibilité</h4>
+                            <h4>Projet scolaire: Refonte d'un site afin d'améliorer le référencement et l'accessibilité</h4>
                         </figcaption>
                     </figure>
                 </a>
@@ -122,13 +119,12 @@
                         <div class="img-container">
                             <img src="images/projects-render/kanap.png" alt="captures d'écran du site Kanap">
                             <div class="languages">
-                                <div class="triangle"></div>
                                 <i class="fa-brands fa-js"></i>
                             </div>
                         </div>
                         <figcaption>
                             <h3>Kanap</h3>
-                            <h4>Affichage dynamique de données grâce aux requêtes API</h4>
+                            <h4>Projet scolaire: Affichage dynamique de données grâce aux requêtes API</h4>
                         </figcaption>
                     </figure>
                 </a>
@@ -137,7 +133,6 @@
                         <div class="img-container">
                             <img src="images/projects-render/weather-app.png" alt="captures d'écran d'une application météo">
                             <div class="languages">
-                                <div class="triangle"></div>
                                 <i class="fa-brands fa-js"></i>
                             </div>
                         </div>
@@ -152,7 +147,6 @@
                         <div class="img-container">
                             <img src="images/projects-render/milmo.png" alt="captures d'écran du site Mil'mo">
                             <div class="languages">
-                                <div class="triangle"></div>
                                 <i class="fa-brands fa-wordpress-simple"></i>
                             </div>
                         </div>
@@ -167,7 +161,6 @@
                         <div class="img-container">
                             <img src="images/projects-render/leslie-fessel.png" alt="captures d'écran du site de Leslie Fessel (psychomotricienne)">
                             <div class="languages">
-                                <div class="triangle"></div>
                                 <i class="fa-brands fa-php"></i>
                             </div>
                         </div>
@@ -195,10 +188,26 @@
 
         <section id="contact">
             <h2>Contactez-moi !</h2>
-            <form action="form.php" method="post">
-                <input type="text" placeholder="Votre nom">
-                <input type="email" placeholder="Votre email"> 
-                <textarea cols="30" rows="10" placeholder="Votre message"></textarea>
+            <form action="php/form.php" method="post">
+                <input type="text" id="name" name="name" placeholder="Votre nom *" aria-required="true" required>
+                <p id="name__error" class="error hidden">
+                    Ce champs ne doit contenir que des lettres
+                </p> 
+                <p class="empty-value error hidden">
+                    Merci de renseigner toutes les informations
+                </p>
+                <input type="email" id="email" name="email" placeholder="Votre email *" aria-required="true" required> 
+                <p id="email__error" class="error hidden">
+                    Email invalide
+                </p>
+                <p class="empty-value error hidden">
+                    Merci de renseigner toutes les informations
+                </p>
+                <textarea cols="30" rows="10" id="message" name="message" placeholder="Votre message *" aria-required="true" required></textarea>
+                <p class="empty-value error hidden">
+                    Merci de renseigner toutes les informations
+                </p>
+
                 <div class="shine-container-btn shine-container-btn--rect">
                     <div class="border-btn border-btn--rect">
                         <input type="submit" value="envoyer" class="btn btn--rect">
