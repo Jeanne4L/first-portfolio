@@ -143,7 +143,7 @@ section:not(.career section):not(.about) {
 .btn a, .btn {
     font-size: 1.1rem;
 }
-.about .btn, .more .btn, .kanap .btn {
+.about .btn, .more .btn, .kanap .btn, .form .btn {
     background-color: #4E7778;
     transform: rotate(45deg);
     display: flex;
@@ -268,7 +268,7 @@ header ul {
 .about h2 {
     margin-top: -10px;
 }
-.about .btn a, .more .btn a {
+.about .btn a, .more .btn a, .form .btn a {
     color: white;
     text-align: center;
 }
@@ -389,6 +389,43 @@ footer i {
     padding: 5px;
 }
 
+
+/*                                                          */
+/*                       FORM PAGE                          */
+/*                                                          */
+.form {
+    height: 100vh;
+    display: flex;
+}
+.form p {
+    text-align: center;
+    width: 70%;
+    margin: 45% auto 15% auto;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: white;
+}
+.form .shine-container-btn {
+    width: 116px;
+    height: 116px;
+    border-radius: 120px;
+}
+.form .btn {
+    width: 110px;
+    height: 110px;
+    border-radius: 120px;
+}
+.form .btn a {
+    font-size: 1.05rem;
+}
+.form footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.form footer i{
+    color: #006369;
+}
 
 /*                                                          */
 /*                       CAREER PAGE                        */
