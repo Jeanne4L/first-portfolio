@@ -143,7 +143,7 @@ section:not(.career section):not(.about) {
 .btn a, .btn {
     font-size: 1.1rem;
 }
-.about .btn, .more .btn, .kanap .btn, .form .btn {
+.about .btn, .more .btn, .kanap .btn, .form-res .btn {
     background-color: #4E7778;
     transform: rotate(45deg);
     display: flex;
@@ -186,12 +186,12 @@ header i {
     animation: hide 400ms linear forwards;
 }
 .opened-menu {
-    animation: display 400ms linear;
+    animation: display 400ms linear forwards;
 }
 .menu {
     position: absolute;
     z-index: 4;
-    right: 0;
+    right: -250px;
     background-color: white;
     bottom: -250px;
     height: 250px;
@@ -202,19 +202,19 @@ header i {
 
 @keyframes display {
     0% {
-        transform: translateX(250px) scale(0);
+        transform: translateX(0) scale(0);
     }
     100% {
-        transform: translateX(0) scale(1);
+        transform: translateX(-250px) scale(1);
     }
 }
 
 @keyframes hide {
     0% {
-        transform: translateX(0);
+        transform: translateX(-250px);
     }
     100% {
-        transform: translateX(250px) scale(0);
+        transform: translateX(0) scale(0);
     }
 }
 
@@ -268,7 +268,7 @@ header ul {
 .about h2 {
     margin-top: -10px;
 }
-.about .btn a, .more .btn a, .form .btn a {
+.about .btn a, .more .btn a, .form-res .btn a {
     color: white;
     text-align: center;
 }
@@ -280,6 +280,9 @@ header ul {
 figure {
     width: 95%;
     margin: 0 auto 35px auto;
+}
+#portfolio figure {
+    max-width: 420px;
 }
 /* figure img {
     animation: scale 900ms;
@@ -333,6 +336,7 @@ figure h4 {
 /*                           CONTACT                         */
 form {
     width: 90%;
+    max-width: 540px;
     margin: auto;
 }
 input, textarea {
@@ -393,37 +397,44 @@ footer i {
 /*                                                          */
 /*                       FORM PAGE                          */
 /*                                                          */
-.form {
+.form-res {
     height: 100vh;
     display: flex;
+    flex-direction: column;
 }
-.form p {
+.form-res main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.form-res p {
     text-align: center;
     width: 70%;
-    margin: 45% auto 15% auto;
     font-size: 1.1rem;
     line-height: 2rem;
     color: white;
+    margin-bottom: 30px;
 }
-.form .shine-container-btn {
+.form-res .shine-container-btn {
     width: 116px;
     height: 116px;
     border-radius: 120px;
+    margin: 0 auto;
 }
-.form .btn {
+.form-res .btn {
     width: 110px;
     height: 110px;
     border-radius: 120px;
 }
-.form .btn a {
-    font-size: 1.05rem;
+.form-res .btn a {
+    font-size: 1rem;
 }
-.form footer{
-    position: fixed;
+.form-res footer{
     width: 100%;
-    bottom: 0;
 }
-.form footer i{
+.form-res footer i{
     color: #006369;
 }
 
@@ -511,6 +522,7 @@ footer i {
 }
 .box {
     width: 95%;
+    max-width: 420px;
     margin: auto;
     background-color: #F2F2F2;
     padding: 8px;
@@ -633,4 +645,217 @@ footer i {
 
 .hidden {
     display: none;
+}
+
+@media (min-width: 481px) {
+    .about h1, .kanap h1, .career h1 {
+        font-size: 3.2rem;
+    }
+    h2:not(.career h2) {
+        font-size:3rem;
+    }
+    .kanap h1 .ri-code-s-slash-fill {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width:600px) {
+    header {
+        padding: 15px 0;
+    }
+    .overlay,  header .ri-close-line, header .ri-menu-line {
+        display: none;
+    }
+    .menu {
+        position: static;
+        background: transparent;
+        width: 100%;
+        height: auto;
+    }
+    header ul {
+        display: flex;
+        padding: 0;
+        justify-content: flex-end;
+    }
+    header li {
+        margin-left: 35px;
+    }
+    header li a {
+        color: white;
+    }
+    .career header li a {
+        font-size: 0.9rem;
+    }
+    #contact .btn {
+        width: 98.5%;
+    }
+
+    .shine-container-btn--circle {
+        width: 96px;
+        height: 96px;
+    }
+    .shine-container-btn--rect {
+        height: 50px;
+    }
+    #contact .btn {
+        width: 99%;
+    }
+    .border-btn--circle {
+        width: 200px;
+    }
+    .btn--circle {
+        width: 90px;
+        height: 90px;
+    }
+    .btn, .btn a {
+        font-size: 1rem;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 62.81px 0 0 0;
+    }
+    .about .img-container {
+        width: 55%;
+    }
+    .profile-photo {
+        border-bottom-right-radius: 30px;
+    }
+    .about .container:not(header .container) {
+        width: 45%;
+        margin-bottom: 35px;
+    }
+    .about h1 {
+        font-size: 2.8rem;
+        margin: 0 0 10px 0;
+    }
+    .about h2 {
+        font-size: 2.4rem;
+    }
+    .career h1 {
+        margin: 70px 0 60px 0;
+    }
+
+    .portfolio__container {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 95%;
+        flex-wrap: wrap;
+    }
+    .portfolio__container a {
+        width: 48%;
+    }
+    .portfolio__container figure {
+        width: 100%;
+    }
+    .languages:not(.languages:last-of-type) {
+        padding: 5px;
+    }
+    .languages:last-of-type {
+        padding: 0;
+    }
+    .languages i:not(.fa-eye):not(.fa-php) {
+        font-size: 1.5rem;
+    }
+    .fa-eye {
+        font-size: 1.2rem;
+    }
+    .fa-php {
+        font-size: 1.7rem;
+    }
+
+    .more h2 {
+        margin-bottom: 250px;
+    }
+
+    .comics {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+    }
+    .box p {
+        margin: 0;
+        text-align: center;
+    }
+    .box {
+        height: 341px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .box1, .box3 {
+        flex-direction: column-reverse;
+    }
+    .box1 {
+        width: 39%;
+    }
+    .box1 .bubble-line {
+        left: 55%;
+        bottom: 60%;
+    }
+    .box2, .box4 {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .box2 {
+        width: 59%;
+    }
+    .box2 .bubble-line, .box4 .bubble-line {
+        left: 45%;
+        bottom: 50%;
+    }
+    .box2 img {
+        width: 220px;
+    }
+    .box3 {
+        width: 45%;
+    }
+    .box3 img {
+        float: left;
+    }
+    .box4 {
+        width: 53%;
+    }
+    .box4 img {
+        width: 230px;
+    }
+
+    .kanap main {
+        padding-bottom: 50px;
+    }
+    .kanap__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2%;
+        width: 95%;
+        margin: auto;
+        padding: 50px 0 70px 0;
+    }
+    .kanap__grid figure {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .kanap-grid__first {
+        grid-column: 1 / 3;
+        grid-row: 1/2;
+    }
+    .kanap-grid__second {
+        grid-column: 1/ 2;
+        grid-row: 2/3;
+    }
+    .kanap-grid__third {
+        grid-column: 2 / 3;
+        grid-row: 2/3;
+    }
+    .kanap-grid__fourth {
+        grid-column: 1 / 2;
+        grid-row: 3/4;
+    }
+    .kanap-grid__fifth {
+        grid-column: 2 / 3;
+        grid-row: 3/4;
+    }
 }

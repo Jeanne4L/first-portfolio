@@ -43,13 +43,13 @@
         <title>
             Sandra Petereau - Message
         </title>
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 
         <link rel="stylesheet" href="../style.css">
             <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     </head>
 
-    <body class="form">
+    <body class="form-res">
         <main class="bgc-gradient">
             <header>
                 <div class="container">

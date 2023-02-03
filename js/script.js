@@ -14,38 +14,39 @@ if(openMenuBtn) {
 }
 
 function displayMenu() {
-    let isOpenedMenu = false;
+    if (window.matchMedia("(max-width: 480px)").matches) {
+        let isOpenedMenu = false;
 
-    openMenuBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        
-        overlay.classList.remove('hidden');
-        menu.classList.remove('hidden');
-        menu.classList.add('opened-menu');
-        openMenuBtn.classList.add('hidden');
-        closeMenuBtn.classList.remove('hidden');
-        isOpenedMenu = true;
-    })
-
-    // close menu with button or click off the menu
-    closeMenuBtn.addEventListener('click', ()=> {
-        overlay.classList.add('hidden');
-        menu.classList.remove('opened-menu');
-        menu.classList.add('closed-menu');
-        closeMenuBtn.classList.add('hidden');
-        openMenuBtn.classList.remove('hidden');
-    })
-    document.body.addEventListener('click', ()=> {
-        if(isOpenedMenu) {
+        openMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            overlay.classList.remove('hidden');
+            menu.classList.add('opened-menu');
+            openMenuBtn.classList.add('hidden');
+            closeMenuBtn.classList.remove('hidden');
+            isOpenedMenu = true;
+        })
+    
+        // close menu with button or click off the menu
+        closeMenuBtn.addEventListener('click', ()=> {
             overlay.classList.add('hidden');
             menu.classList.remove('opened-menu');
             menu.classList.add('closed-menu');
             closeMenuBtn.classList.add('hidden');
             openMenuBtn.classList.remove('hidden');
-
-            isOpenedMenu = false;
-        }
-    })
+        })
+        document.body.addEventListener('click', ()=> {
+            if(isOpenedMenu) {
+                overlay.classList.add('hidden');
+                menu.classList.remove('opened-menu');
+                menu.classList.add('closed-menu');
+                closeMenuBtn.classList.add('hidden');
+                openMenuBtn.classList.remove('hidden');
+    
+                isOpenedMenu = false;
+            }
+        })
+    }
 }
 
 
@@ -108,27 +109,32 @@ function changeHeaderColor() {
 }
 changeHeaderColor();
 
-let nameInput = document.querySelector('#name');
-let emailInput = document.querySelector('#email');
-let message = document.querySelector('#message');
-let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-nameInput.addEventListener('change', (e)=> {
-    if(/[^A-Za-zéêèÉÊÈ\s]/.test(e.target.value)){
-        document.querySelector('#name__error').classList.remove('hidden');
-        nameInput.classList.add('error');
-    } else {
-        document.querySelector('#name__error').classList.add('hidden');
-        nameInput.classList.remove('error');
-    }
-});
+// check that the inputs are correct
+function checkInputValue() {
+    let nameInput = document.querySelector('#name');
+    let emailInput = document.querySelector('#email');
+    let message = document.querySelector('#message');
+    let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-emailInput.addEventListener('change', (e)=> {
-    if(emailRegex.test(e.target.value)){
-        document.querySelector('#email__error').classList.add('hidden');
-        emailInput.classList.remove('error');
-    } else {
-        document.querySelector('#email__error').classList.remove('hidden');
-        emailInput.classList.add('error');
-    }
-});
+    nameInput.addEventListener('change', (e)=> {
+        if(/[^A-Za-zéêèÉÊÈ\s]/.test(e.target.value)){
+            document.querySelector('#name__error').classList.remove('hidden');
+            nameInput.classList.add('error');
+        } else {
+            document.querySelector('#name__error').classList.add('hidden');
+            nameInput.classList.remove('error');
+        }
+    });
+
+    emailInput.addEventListener('change', (e)=> {
+        if(emailRegex.test(e.target.value)){
+            document.querySelector('#email__error').classList.add('hidden');
+            emailInput.classList.remove('error');
+        } else {
+            document.querySelector('#email__error').classList.remove('hidden');
+            emailInput.classList.add('error');
+        }
+    });
+}
+checkInputValue()
