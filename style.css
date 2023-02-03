@@ -506,7 +506,7 @@ footer i {
 #twist h2, .to-be-continued {
     text-align: right;
 }
-#beginning .career__light-parts p, #twist .career__light-parts p, #new-start .career__light-parts p:not(.box p):not(.comics + p) {
+#beginning p, #twist p, #new-start p:not(.box p):not(.comics + p) {
     text-align: justify;
     width: 90%;
     margin: 0 auto 20px auto;
@@ -724,7 +724,10 @@ footer i {
     }
     .about .container:not(header .container) {
         width: 45%;
-        margin-bottom: 35px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
     }
     .about h1 {
         font-size: 2.8rem;
@@ -858,4 +861,169 @@ footer i {
         grid-column: 2 / 3;
         grid-row: 3/4;
     }
+}
+
+@media (min-width: 770px) {
+    header img {
+        width: 37px;
+    }
+    .about {
+        padding-top: 69.7px;
+    }
+    .about h1 {
+        font-size: 3.2rem;
+    }
+
+    .career main {
+        padding-bottom: 50px;
+    }
+    .career h1 {
+        margin-top: 80px;
+    }
+    #beginning {
+        padding-top: 60px;
+    }
+}
+
+@media (min-width: 900px) {
+    header li a, .career header li a {
+        font-size: 1.1rem;
+    }
+    .about h1, .career h1 {
+        font-size: 4rem;
+    }
+    h2:not(.career h2) {
+        font-size: 3.7rem;
+    }
+    .career h2 {
+        font-size: 3.2rem;
+        width: 95%;
+        margin-top: 15px;
+    }
+
+    .shine-container-btn--circle {
+        width: 106px;
+        height: 106px;
+    }
+    .btn--circle {
+        width: 100px;
+        height: 100px;
+    }
+    .btn, .btn a {
+        font-size: 1.1rem;
+    }
+
+    .line-to-left, .line-to-right, .career h2 i {
+        display: none;
+    }
+    .career__light-parts {
+        background-color: transparent;
+        border-radius: 0;
+        margin: 0; 
+    }
+    .career .column {
+        display: block;
+    }
+    .career p {
+        font-size: 18.25px;
+        line-height: 30px;
+    }
+    #beginning, #twist, #new-start {
+        background-color: #31aaa8;
+        margin-bottom: 70px;
+        width: 95%;
+        padding: 30px 0;
+    }
+    #beginning, #new-start {
+        border-bottom-right-radius: 500px;
+    }
+    #beginning {
+        margin-top: 80px;
+    }
+    #twist {
+        margin-left: 5%;
+        border-bottom-left-radius: 500px;
+    }
+    #nex-start {
+        padding-bottom: 70px;
+    }
+    #beginning p, #twist p, #new-start p {
+        width: 95%;
+    }
+    .career img:not(.comics img) {
+        width: 50%;
+    }
+
+    #beginning p, #new-start p:not(.comics p) {
+        margin-left: 2.5%;
+        text-align: left;
+    }
+    #beginning .career__illustration, #new-start .career__illustration {
+        right: 0;
+    }
+    #new-start .career__illustration {
+        margin: 0;
+        bottom: 0;
+        width: 35%;
+    }
+    #beginning .third-p, #beginning .fifth-p, #beginning .sixth-p {
+        width: 50%;
+    }
+    #beginning .fourth-p {
+        width: 45%;
+    }
+
+    .career .column {
+        position: relative;
+    }
+    #twist p {
+        margin-right: 2.5%;
+        text-align: right;
+    }
+    #twist .third-p {
+        width: 75%;
+    }
+    #twist .fourth-p {
+        width: 45%;
+    }
+    #twist .fifth-p {
+        width: 50%;
+    }
+    .career__illustration {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .comics {
+        width: 95%;
+    }
+    .comics img {
+        width: 350px;
+    }
+    .box {
+        height: 440px;
+        max-width: 700px;
+        padding: 20px;
+    }
+    .box1 {
+        border-top-left-radius: 50px;
+    }
+    .box2 {
+        border-top-right-radius: 50px;
+    }
+    .box3 {
+        border-bottom-left-radius: 50px;
+    }
+    .box4 {
+        border-bottom-right-radius: 50px;
+    }
+    .box2 p, .box4 p {
+        text-align: left;
+    }
+    .comics + p {
+        margin: 70px auto;
+    }
+    /* #new-start .shine-container-btn {
+        margin-left: 2.5%;
+    } */
 }
