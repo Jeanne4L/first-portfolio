@@ -152,3 +152,25 @@ function checkInputValue() {
         }
     });
 };
+
+let figures = document.querySelectorAll('figure');
+
+if(figures && window.matchMedia("(min-width: 900px)").matches) {
+    displayFigcaption();
+}
+
+function displayFigcaption() {
+    for( let i=0; i<figures.length; i++) {
+        let figcaption = figures[i].querySelector('figcaption');
+
+        figures[i].addEventListener('mouseover', ()=> {
+            figcaption.classList.remove('stop-hover');
+            figcaption.classList.add('hover');
+        })
+
+        figures[i].addEventListener('mouseout', ()=> {
+            figcaption.classList.remove('hover');
+            figcaption.classList.add('stop-hover');
+        })
+    }
+}
