@@ -72,7 +72,7 @@ function displayCareerParts() {
     
             downArrows[i].classList.add('hidden');
             upArrow.classList.remove('hidden');
-            linePicture.classList.add('disappear');
+            linePicture.classList.add('hide-line');
             column.classList.remove('hidden');
     
             setTimeout(()=>{
@@ -92,12 +92,12 @@ function displayCareerParts() {
                 downArrow.classList.remove('hidden');
         
                 column.classList.add('hidden');
-                linePicture.classList.remove('disappear');
-                linePicture.classList.add('appear');
+                linePicture.classList.remove('hide-line');
+                linePicture.classList.add('display-line');
                 linePicture.classList.remove('hidden');
         
                 setTimeout(()=>{
-                    linePicture.classList.remove('appear');
+                    linePicture.classList.remove('display-line');
                 },405);
             })
         }
@@ -172,5 +172,17 @@ function displayFigcaption() {
             figcaption.classList.remove('hover');
             figcaption.classList.add('stop-hover');
         })
+    }
+}
+
+// get id of clicked element and display assigned div
+let jobDetails = document.querySelectorAll('.job');
+
+for(let i=0; i<jobDetails.length; i++) {
+    jobDetails[i].onclick = function() {
+        let elementId = this.getAttribute('id');
+
+        let div = document.querySelector('.'+ elementId);
+        div.classList.remove('hidden');
     }
 }
