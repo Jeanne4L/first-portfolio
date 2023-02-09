@@ -12,7 +12,7 @@ let anchor = document.querySelector('.anchor-top');
 if(openMenuBtn) {
     if (window.matchMedia("(max-width: 600px)").matches) {
         displayMenu();
-    }
+    };
 };
 
 function displayMenu() {
@@ -46,8 +46,8 @@ function displayMenu() {
             openMenuBtn.classList.remove('hidden');
 
             isOpenedMenu = false;
-        }
-    })
+        };
+    });
 };
 
 
@@ -75,18 +75,19 @@ function displayCareerParts() {
             linePicture.classList.add('hide-line');
             column.classList.remove('hidden');
     
+            // gap between animations
             setTimeout(()=>{
-                linePicture.classList.add('hidden'); 
+                linePicture.classList.add('hidden')
             },550);
         });
 
-        hideCareerParts()
-    }
+        hideCareerParts();
+    };
 };
-
 
 function hideCareerParts() {
     for(let i=0; i<upArrows.length; i++) {
+
         upArrows[i].addEventListener('click', ()=> {
             let downArrow = upArrows[i].nextSibling;
             let section = downArrows[i].closest('section');
@@ -101,12 +102,13 @@ function hideCareerParts() {
             linePicture.classList.add('display-line');
             linePicture.classList.remove('hidden');
     
+            // gap between animations
             setTimeout(()=>{
                 linePicture.classList.remove('display-line');
             },405);
-        })
-    }
-}
+        });
+    };
+};
 
 
 // change header color with scroll 
@@ -120,20 +122,19 @@ function changeHeaderColor() {
         } else {
             header.style.backgroundColor = '#0E3E40';
             anchor.classList.remove('hidden');
-        }
-    })
+        };
+    });
 };
 
 
-// check that the inputs are correct
+// check inputs value
 if(document.querySelector('form')) {
-    checkInputValue()
+    checkInputValue();
 };
 
 function checkInputValue() {
     let nameInput = document.querySelector('#name');
     let emailInput = document.querySelector('#email');
-    let message = document.querySelector('#message');
     let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     nameInput.addEventListener('change', (e)=> {
@@ -143,7 +144,7 @@ function checkInputValue() {
         } else {
             document.querySelector('#name__error').classList.add('hidden');
             nameInput.classList.remove('error');
-        }
+        };
     });
 
     emailInput.addEventListener('change', (e)=> {
@@ -153,10 +154,11 @@ function checkInputValue() {
         } else {
             document.querySelector('#email__error').classList.remove('hidden');
             emailInput.classList.add('error');
-        }
+        };
     });
 };
 
+// display overlay with figcaption
 let figures = document.querySelectorAll('figure');
 
 if(figures && window.matchMedia("(min-width: 900px)").matches) {
@@ -170,16 +172,16 @@ function displayFigcaption() {
         figures[i].addEventListener('mouseover', ()=> {
             figcaption.classList.remove('stop-hover');
             figcaption.classList.add('hover');
-        })
+        });
 
         figures[i].addEventListener('mouseout', ()=> {
             figcaption.classList.remove('hover');
             figcaption.classList.add('stop-hover');
-        })
-    }
-}
+        });
+    };
+};
 
-// get id of clicked element and display assigned div
+// get id of clicked job span and display assigned div
 let jobDetails = document.querySelectorAll('.job');
 
 for(let i=0; i<jobDetails.length; i++) {
@@ -192,16 +194,16 @@ for(let i=0; i<jobDetails.length; i++) {
         let div = document.querySelector('.'+ elementId);
 
         displayJobDivDetails(isDisplayedDiv, div);
-    }
-}
+    };
+};
 
 function displayJobDivDetails(isDisplayedDiv, div) {
     overlay.classList.remove('hidden');
     div.classList.remove('hidden');
     isDisplayedDiv = true;
 
-    hideJobDivDetails(isDisplayedDiv, div)
-}
+    hideJobDivDetails(isDisplayedDiv, div);
+};
 
 function hideJobDivDetails(isDisplayedDiv, div) {
     document.body.addEventListener('click', ()=> {
@@ -209,6 +211,6 @@ function hideJobDivDetails(isDisplayedDiv, div) {
             overlay.classList.add('hidden');
             div.classList.add('hidden');
             isOpenedMenu = false;
-        }
-    })
-}
+        };
+    });
+};

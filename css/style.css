@@ -70,24 +70,24 @@
 /*                                                                             */
 @font-face {
     font-family: 'Riesling';
-    src: url('fonts/riesling/Riesling.eot');
-    src: url('fonts/riesling/Riesling.eot?#iefix') format('embedded-opentype'),
-        url('fonts/riesling/Riesling.woff2') format('woff2'),
-        url('fonts/riesling/Riesling.woff') format('woff'),
-        url('fonts/riesling/Riesling.ttf') format('truetype'),
-        url('fonts/riesling/Riesling.svg#Riesling') format('svg');
+    src: url('../fonts/riesling/Riesling.eot');
+    src: url('../fonts/riesling/Riesling.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/riesling/Riesling.woff2') format('woff2'),
+        url('../fonts/riesling/Riesling.woff') format('woff'),
+        url('../fonts/riesling/Riesling.ttf') format('truetype'),
+        url('../fonts/riesling/Riesling.svg#Riesling') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'tafa_sansregular';
-    src: url('fonts/tafa/tafa-regular-webfont.eot');
-    src: url('fonts/tafa/tafa-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/tafa/tafa-regular-webfont.woff2') format('woff2'),
-         url('fonts/tafa/tafa-regular-webfont.woff') format('woff'),
-         url('fonts/tafa/tafa-regular-webfont.ttf') format('truetype'),
-         url('fonts/tafa/tafa-regular-webfont.svg#afta_sansregular') format('svg');
+    src: url('../fonts/tafa/tafa-regular-webfont.eot');
+    src: url('../fonts/tafa/tafa-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tafa/tafa-regular-webfont.woff2') format('woff2'),
+         url('../fonts/tafa/tafa-regular-webfont.woff') format('woff'),
+         url('../fonts/tafa/tafa-regular-webfont.ttf') format('truetype'),
+         url('../fonts/tafa/tafa-regular-webfont.svg#afta_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
