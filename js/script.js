@@ -80,29 +80,33 @@ function displayCareerParts() {
             },550);
         });
 
-        // hide career parts
-        for(let i=0; i<upArrows.length; i++) {
-            upArrows[i].addEventListener('click', ()=> {
-                let downArrow = upArrows[i].nextSibling;
-                let section = downArrows[i].closest('section');
-                let column = section.querySelector('.column');
-                let linePicture = section.querySelector('img');
-        
-                upArrows[i].classList.add('hidden');
-                downArrow.classList.remove('hidden');
-        
-                column.classList.add('hidden');
-                linePicture.classList.remove('hide-line');
-                linePicture.classList.add('display-line');
-                linePicture.classList.remove('hidden');
-        
-                setTimeout(()=>{
-                    linePicture.classList.remove('display-line');
-                },405);
-            })
-        }
+        hideCareerParts()
     }
 };
+
+
+function hideCareerParts() {
+    for(let i=0; i<upArrows.length; i++) {
+        upArrows[i].addEventListener('click', ()=> {
+            let downArrow = upArrows[i].nextSibling;
+            let section = downArrows[i].closest('section');
+            let column = section.querySelector('.column');
+            let linePicture = section.querySelector('img');
+    
+            upArrows[i].classList.add('hidden');
+            downArrow.classList.remove('hidden');
+    
+            column.classList.add('hidden');
+            linePicture.classList.remove('hide-line');
+            linePicture.classList.add('display-line');
+            linePicture.classList.remove('hidden');
+    
+            setTimeout(()=>{
+                linePicture.classList.remove('display-line');
+            },405);
+        })
+    }
+}
 
 
 // change header color with scroll 
@@ -179,10 +183,32 @@ function displayFigcaption() {
 let jobDetails = document.querySelectorAll('.job');
 
 for(let i=0; i<jobDetails.length; i++) {
-    jobDetails[i].onclick = function() {
-        let elementId = this.getAttribute('id');
+    let isDisplayedDiv = false;
 
+    jobDetails[i].onclick = function(e) {
+        e.stopPropagation();
+
+        let elementId = this.getAttribute('id');
         let div = document.querySelector('.'+ elementId);
-        div.classList.remove('hidden');
+
+        displayJobDivDetails(isDisplayedDiv, div);
     }
+}
+
+function displayJobDivDetails(isDisplayedDiv, div) {
+    overlay.classList.remove('hidden');
+    div.classList.remove('hidden');
+    isDisplayedDiv = true;
+
+    hideJobDivDetails(isDisplayedDiv, div)
+}
+
+function hideJobDivDetails(isDisplayedDiv, div) {
+    document.body.addEventListener('click', ()=> {
+        if(isDisplayedDiv) {
+            overlay.classList.add('hidden');
+            div.classList.add('hidden');
+            isOpenedMenu = false;
+        }
+    })
 }

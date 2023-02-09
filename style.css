@@ -1,3 +1,73 @@
+/*                                  KEYFRAMES                                 */
+@keyframes scale-photo {
+    0% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shine {
+    to {
+      background-position: -200% center;
+    }
+}
+
+@keyframes display-menu {
+    0% {
+        transform: translateX(0) scale(0);
+    }
+    100% {
+        transform: translateX(-250px) scale(1);
+    }
+}
+@keyframes hide-menu {
+    0% {
+        transform: translateX(-250px);
+    }
+    100% {
+        transform: translateX(0) scale(0);
+    }
+}
+
+@keyframes display-line {
+    0% {
+        transform: rotate(0deg) scale(0);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+@keyframes hide-line {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(0);
+    }
+}
+
+@keyframes display-underline {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+@keyframes hide-underline {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+/*                                                                             */
+/*                                   GENERAL                                   */
+/*                                                                             */
 @font-face {
     font-family: 'Riesling';
     src: url('fonts/riesling/Riesling.eot');
@@ -22,10 +92,6 @@
     font-style: normal;
 }
 
-/*                                                          */
-/*                        INDEX PAGE                        */
-/*                                                          */
-
 body {
     margin: 0;
     background-color: #F2F2F2;
@@ -36,7 +102,7 @@ body {
     color: #006369;
     box-sizing: border-box;
 }
-h1, h2 {
+h1, h2, .job__details h3, .job-div h4 {
     font-family: 'Riesling', sans-serif;
     font-weight: normal;
 }
@@ -59,34 +125,30 @@ ul {
 li {
     list-style-type: none;
 }
+section:not(.career section):not(.about), .kanap__grid {
+    padding: 50px 0;
+}
+
 .center {
     text-align: center;
 }
-
 .bgc-gradient {
     background: radial-gradient(circle at 100% 0%, rgba(14, 63, 64, 1) 0%, rgba(0, 99, 105, 1) 36%, rgba(14, 63, 64, 1) 76%, rgba(0, 99, 105, 1) 101%);
 }
-.about h1, .about h2 {
-    color: #FFF;
+.container {
+    width: 90%;
+    margin: auto;
 }
+
+/*                                                                         */
+/*                                 ELEMENTS                                */
+/*                                                                         */
 .overlay {
     position: fixed;
     z-index: 3;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0, 0.5);
-}
-
-.profile-photo, #portfolio img  {
-    width: 100%;
-    height: auto;
-}
-.container {
-    width: 90%;
-    margin: auto;
-}
-section:not(.career section):not(.about) {
-    padding: 50px 0;
 }
 
 /*                          BUTTON                               */
@@ -106,8 +168,8 @@ section:not(.career section):not(.about) {
 }
 
 .shine-container-btn--circle {
-    width: 104px;
-    height: 104px;
+    width: 75px;
+    height: 75px;
     border-radius: 100px;
 }
 .border-btn--circle {
@@ -130,19 +192,9 @@ section:not(.career section):not(.about) {
     background-size: 200% auto;
     animation: shine 2000ms linear infinite;
 }
-
-@keyframes shine {
-    to {
-      background-position: -200% center;
-    }
-}fff
-
 .btn {
-    display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
-    margin: auto;
 }
 .btn--circle {
     width: 94%;
@@ -151,7 +203,7 @@ section:not(.career section):not(.about) {
     border-radius: 100px;
 }
 .btn a, .btn {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 .about .btn, .more .btn, .kanap .btn, .form-res .btn {
     background-color: #4E7778;
@@ -166,13 +218,23 @@ section:not(.career section):not(.about) {
     margin-top: 8px;
 }
 
-/*                          HEADER                               */
+/*                                                                                     */
+/*                                      INDEX PAGE                                     */
+/*                                                                                     */
+.profile-photo, #portfolio img  {
+    width: 100%;
+    height: auto;
+}
+.about h1, .about h2 {
+    color: #FFF;
+}
+
+/*                                      HEADER                                          */
 header {
     padding: 8px 0;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: transparent;
     z-index: 5;
 }
 header .container {
@@ -191,6 +253,8 @@ header i {
 .ri-close-line {
     font-size: 1.5rem;
 }
+
+/*                      MENU                          */
 .closed-menu {
     animation: hide-menu 400ms linear forwards;
 }
@@ -207,24 +271,6 @@ header i {
     width: 250px;
     border-bottom-left-radius: 300px;
     transform-origin: top right;
-}
-
-@keyframes display-menu {
-    0% {
-        transform: translateX(0) scale(0);
-    }
-    100% {
-        transform: translateX(-250px) scale(1);
-    }
-}
-
-@keyframes hide-menu {
-    0% {
-        transform: translateX(-250px);
-    }
-    100% {
-        transform: translateX(0) scale(0);
-    }
 }
 
 header ul {
@@ -249,7 +295,7 @@ header ul {
     grid-row: 3/4;
 }
 
-/*                      PRESENTATION                    */
+/*                                          ABOUT                                        */
 .img-container {
     display: flex;
     overflow: hidden;
@@ -259,15 +305,6 @@ header ul {
 }
 .profile-drawing {
     display: none;
-}
-
-@keyframes scale-photo {
-    0% {
-        transform: scale(1.4);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 .about {
@@ -285,7 +322,7 @@ header ul {
     text-align: center;
 }
 
-/*                      PORTFOLIO                    */
+/*                                        PORTFOLIO                                       */
 #portfolio {
     padding-bottom: 30px;
 }
@@ -334,7 +371,7 @@ figure h4 {
     font-size: 0.9rem;
 }
 
-/*                      MORE INFORMATION                    */
+/*                                   MORE INFORMATION                                    */
 .more h2 {
     width: 60%;
     margin: auto;
@@ -342,7 +379,7 @@ figure h4 {
     margin-bottom: 370px;
 }
 
-/*                           CONTACT                         */
+/*                                        CONTACT                                        */
 form {
     width: 90%;
     max-width: 540px;
@@ -360,9 +397,6 @@ input:focus, textarea:focus {
     outline: none;
     border-color: #006369;
 }
-::placeholder {
-    color: rgba(0, 99, 105, 0.45);
-}
 form p {
     margin-top: 0;
     font-size: 0.9rem;
@@ -372,7 +406,7 @@ form p {
     border-color: #A10010;
 }
 
-/*                          ANCHOR TOP OF PAGE                 */
+/*                                       RETURN TOP                                      */
 .anchor-top {
     border: solid 2px #0E3E40;
     border-radius: 50px;
@@ -391,7 +425,7 @@ form p {
     color: #0E3E40;
 }
 
-/*                           FOOTER                            */
+/*                                            FOOTER                                     */
 footer {
     background-color:  #0E3E40;
     padding: 20px 0 40px 0;
@@ -403,9 +437,9 @@ footer i {
 }
 
 
-/*                                                          */
-/*                       FORM PAGE                          */
-/*                                                          */
+/*                                                                                         */
+/*                                        FORM PAGE                                        */
+/*                                                                                         */
 .form-res {
     height: 100vh;
     display: flex;
@@ -445,55 +479,18 @@ footer i {
     color: #006369;
 }
 
-/*                                                          */
-/*                       CAREER PAGE                        */
-/*                                                          */
-.career a:not(.menu a), .career h1, .career h2, .career p, .career i:not(.anchor-top i):not(.career footer i) {
+/*                                                                                         */
+/*                                         CAREER PAGE                                     */
+/*                                                                                         */
+.career a:not(.menu a), .career h1, .career h2, .career p, .career .ri-arrow-up-s-fill, .career .ri-arrow-down-s-fill {
     color: white;
 }
 #twist span {
     color: #015459;
 }
-
-.career-grid__first {
-    grid-column: 1 / 5;
-    grid-row: 1/2;
+#twist span:hover, header i:hover, .career .ri-arrow-up-s-fill:hover, .career .ri-arrow-down-s-fill:hover {
+    cursor: pointer;
 }
-.career-grid__second {
-    grid-column: 2 / 4;
-    grid-row: 2/3;
-}
-.career-grid__third {
-    grid-column: 3 / 6;
-    grid-row: 3/4;
-}
-
-.career__light-parts {
-    background-color: #2c9796;
-    border-radius: 20px;
-    padding: 35px 0 15px 0;
-    margin-bottom: 50px;
-}
-#new-start .career__light-parts {
-    padding-bottom: 50px;
-}
-#beginning  {
-    padding-top: 50px;
-}
-.career main {
-    padding: 48.78px 0 30px 0;
-}
-.career__illustration {
-    width: 90%;
-    margin: 30px auto 8px auto;
-}
-
-.line-to-right, .line-to-left {
-    display: block;
-    width: 75%;
-    margin: 15px auto;
-}
-
 .career h2 {
     font-size: 2.3rem;
     width: 90%;
@@ -507,6 +504,27 @@ footer i {
     line-height: 1.4rem;
 }
 
+/*                      MENU                          */
+.career-grid__first {
+    grid-column: 1 / 5;
+    grid-row: 1/2;
+}
+.career-grid__second {
+    grid-column: 2 / 4;
+    grid-row: 2/3;
+}
+.career-grid__third {
+    grid-column: 3 / 6;
+    grid-row: 3/4;
+}
+
+.career main {
+    padding: 48.78px 0 30px 0;
+}
+
+#beginning  {
+    padding-top: 50px;
+}
 #beginning h2, #new-start h2 {
     text-align: left;
 }
@@ -519,11 +537,40 @@ footer i {
     margin: 0 auto 20px auto;
 }
 
+/*                      CLEAR PARTS                          */
+.career__light-parts {
+    background-color: #2c9796;
+    border-radius: 20px;
+    padding: 35px 0 15px 0;
+    margin-bottom: 50px;
+}
+#new-start .career__light-parts {
+    padding-bottom: 50px;
+}
 .column {
     display: flex;
     flex-direction: column-reverse;
+    transform-origin: bottom;
+}
+.career__illustration {
+    width: 90%;
+    margin: 30px auto 8px auto;
 }
 
+/*                      LINES ANIMATION                          */
+.line-to-right, .line-to-left {
+    display: block;
+    width: 75%;
+    margin: 15px auto;
+}
+.hide-line {
+    animation: hide-line 400ms ease-in forwards;
+}
+.display-line {
+    animation: display-line 400ms ease-in forwards;
+}
+
+/*                      DIV JOB DETAILS                          */
 .job-div {
     position: fixed;
     top: 50%;
@@ -531,13 +578,46 @@ footer i {
     transform: translate(-50%,-50%);
     width: 90%;
     min-height: 100px;
-    padding: 10px;
-    text-align: center;
+    padding: 15px 15px 3px 15px;
+    text-align: left;
     background-color: #f2f2f2;
+    z-index: 4;
+}
+.job-div i {
+    font-size: 2rem;
+    color: #006369;
+}
+.job-div li {
+    font-size: 0.9rem;
+}
+.job-div h4 {
+    text-align: right;
+    font-size: 2.5rem;
+    margin: 20px 0 0 0;
+}
+.job__details {
+    text-align: center;
+}
+.job__details h3 {
+    font-size: 2.2rem;
+    margin: 15px 0 0 0;
+}
+.job__details span {
+    font-weight: bold;
 }
 
+/*                      COMICS                          */
+.box p, .career footer i, .kanap footer i  {
+    color:#006369;
+}
 .comics {
     margin-bottom: 40px;
+}
+.comics img {
+    width: 100%;
+}
+.box p {
+    margin-bottom: 0;
 }
 .box {
     width: 95%;
@@ -547,15 +627,6 @@ footer i {
     padding: 8px;
     margin-bottom: 10px;
     position: relative;
-}
-.comics img {
-    width: 100%;
-}
-.box p, .career footer i  {
-    color:#006369;
-}
-.box p {
-    margin-bottom: 0;
 }
 .box1, .box3 {
     display: flex;
@@ -588,6 +659,7 @@ footer i {
     bottom: 65%;
     transform: rotate(45deg);
 }
+
 #new-start .btn {
     background-color: #69C1C0;
     display: flex;
@@ -598,36 +670,10 @@ footer i {
     width: 90%;
     margin: 50px auto 50px auto;
 }
-.column {
-    transform-origin: bottom;
-}
-.hide-line {
-    animation: hide-line 400ms ease-in forwards;
-}
-.display-line {
-    animation: display-line 400ms ease-in forwards;
-}
 
-@keyframes hide-line {
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-    100% {
-        transform: rotate(360deg) scale(0);
-    }
-}
-@keyframes display-line {
-    0% {
-        transform: rotate(0deg) scale(0);
-    }
-    100% {
-        transform: rotate(360deg) scale(1);
-    }
-}
-
-/*                                                          */
-/*                        KANAP PAGE                        */
-/*                                                          */
+/*                                                                                        */
+/*                                       KANAP PAGE                                       */
+/*                                                                                        */
 .kanap main {
     padding-top: 48.78px;
 }
@@ -638,18 +684,14 @@ footer i {
     font-size: 0.9rem;
 }
 
-.kanap h1 {
-    align-items: center;
+.kanap__title {
     display: flex;
     justify-content: center;
-    margin-bottom: 0;
-}
-.kanap h1 a {
-    display: inline-flex;
+    align-items: center;
 }
 .kanap .shine-container-btn {
-    width: 44px;
-    height: 44px;
+    width: 38px;
+    height: 38px;
     margin: 0 8px 0 8px;
 }
 .kanap .btn {
@@ -657,14 +699,15 @@ footer i {
     height: 91%;
     justify-content: center;
 }
-.kanap h1 .ri-code-s-slash-fill {
-    font-size: 2.2rem;
+.kanap .btn a {
+    display: flex;
+}
+.kanap__title .ri-code-s-slash-fill {
+    font-size: 1.7rem;
     color: white;
 }
 
-.kanap footer i {
-    color:#006369;
-}
+/*                      PHOTOS                          */
 .kanap__grid img {
     width: 100%;
     height: 300px;
@@ -675,23 +718,25 @@ footer i {
     display: none;
 }
 
+
+/*                                                                                        */
+/*                                     MEDIA QUERIES                                      */
+/*                                                                                        */
 @media (min-width: 481px) {
-    .about h1, .kanap h1, .career h1 {
+    h1 {
         font-size: 3.2rem;
     }
-    h2:not(.career h2) {
+    h2:not(.career h2):not(.about h2) {
         font-size:3rem;
-    }
-    .kanap h1 .ri-code-s-slash-fill {
-        font-size: 2rem;
     }
 }
 
+/*                                     TABLET                                      */
 @media (min-width:600px) {
     header {
         padding: 15px 0;
     }
-    .overlay,  header .ri-close-line, header .ri-menu-line {
+    header .ri-close-line, header .ri-menu-line {
         display: none;
     }
     .menu {
@@ -715,14 +760,7 @@ footer i {
         font-size: 0.9rem;
     }
 
-    .shine-container-btn--circle {
-        width: 96px;
-        height: 96px;
-    }
-    .btn, .btn a {
-        font-size: 1rem;
-    }
-
+    /*                      INDEX                            */
     .about {
         display: flex;
         flex-direction: row-reverse;
@@ -736,13 +774,9 @@ footer i {
     }
     .about .container:not(header .container) {
         width: 45%;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        justify-content: center;
     }
     .about h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         margin: 0 0 10px 0;
     }
     .about h2 {
@@ -783,6 +817,7 @@ footer i {
         margin-bottom: 250px;
     }
 
+    /*                      CAREER PAGE                            */
     .comics {
         display: flex;
         flex-wrap: wrap;
@@ -848,6 +883,11 @@ footer i {
         width: 230px;
     }
 
+    .job-div {
+        width: 70%;
+    }
+
+    /*                      KANAP PAGE                          */
     .kanap__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -878,11 +918,13 @@ footer i {
     }
 }
 
+/*                                     LAPTOP                                      */
 @media (min-width: 770px) {
     .about h1 {
         font-size: 3.2rem;
     }
 
+    /*                      CAREER PAGE                            */
     .career main {
         padding-bottom: 50px;
     }
@@ -914,8 +956,13 @@ footer i {
     .box2 .bubble-line, .box4 .bubble-line {
         left: 55%;
     }
+
+    .job-div {
+        width: 55%;
+    }
 }
 
+/*                                     DESKTOP                                      */
 @media (min-width: 900px) {
     header li a, .career header li a {
         font-size: 1rem;
@@ -929,35 +976,24 @@ footer i {
         transform-origin: right;
         animation: hide-underline 300ms linear forwards;
     }
-    header li a:hover, .career header li a:hover {
+    header li a:hover {
         margin-top: 2px;
     }
-    header li a:hover > .underline, .career header li a:hover > .underline {
+    header li a:hover > .underline {
         transform-origin: left;
         animation: display-underline 300ms linear forwards, shine 2000ms linear infinite forwards;
     }
-    @keyframes display-underline {
-        0% {
-            transform: scaleX(0);
-        }
-        100% {
-            transform: scaleX(1);
-        }
-    }
-    @keyframes hide-underline {
-        0% {
-            transform: scaleX(1);
-        }
-        100% {
-            transform: scaleX(0);
-        }
-    }
+
+    /*                      INDEX                            */
     .about {
         padding: 70px 0 70px 0;
         justify-content: space-evenly;
     }
     .about .container:not(header .container) {
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .about .shine-container-btn {
         margin: 0 auto;
@@ -1011,18 +1047,11 @@ footer i {
         font-size: clamp(2.4rem, 1.5rem + 1.6vw, 2.8rem);
     }
 
-    .shine-container-btn--circle {
-        height: 80px;
-        width: 80px;
-    }
     .shine-container-btn {
         transition-duration: 100ms;
     }
     .shine-container-btn:hover {
         transform: scale(0.95);
-    }
-    .btn, .btn a {
-        font-size: .9rem;
     }
 
     #portfolio {
@@ -1076,11 +1105,16 @@ footer i {
         color: #FFF;
     }
 
-    .container:not(header .container) {
+    /*                      CAREER PAGE                            */
+    .career .container:not(header .container) {
         width: 70%;
     }
     .line-to-left, .line-to-right, .career h2 i {
         display: none;
+    }
+    .job-div {
+        width: 45%;
+        max-width: 540px;
     }
     .career__light-parts {
         background-color: transparent;
@@ -1109,9 +1143,6 @@ footer i {
     #twist {
         margin-left: 15%;
         border-bottom-left-radius: 500px;
-    }
-    #next-start {
-        padding-bottom: 70px;
     }
     #beginning p, #twist p, #new-start p:not(.comics p) {
         width: 95%;
@@ -1176,7 +1207,7 @@ footer i {
         align-items: center;
 
     }
-    .box .bubble line {
+    .box .bubble-line {
         width: 25px;
         height: 2px;
     }
@@ -1199,16 +1230,17 @@ footer i {
     .box2 img {
         width: 70%;
     }
-    .box2 p, .box4 p {
-        text-align: left;
-    }
     .box4 img {
         width: 85%;
+    }
+    .box2 p, .box4 p {
+        text-align: left;
     }
     .comics + p {
         margin: 70px auto;
     }
 
+    /*                      KANAP PAGE                            */
     .kanap__grid {
         width: 85%;
         grid-template-columns: 1fr 1fr 1fr;
@@ -1237,6 +1269,7 @@ footer i {
 }
 
 @media (min-width: 1015px) {
+    /*                      CAREER PAGE                            */
     .career section {
         max-width: 1100px;
     }
@@ -1245,7 +1278,7 @@ footer i {
     }
 
     #twist .third-p {
-        width: 70%;
+        width: 60%;
     }
     #twist .fourth-p {
         width: 55%;
