@@ -125,7 +125,7 @@ ul {
 li {
     list-style-type: none;
 }
-section:not(.career section):not(.about), .kanap__grid {
+section:not(.career section):not(.about), .website__grid {
     padding: 50px 0;
 }
 
@@ -138,6 +138,10 @@ section:not(.career section):not(.about), .kanap__grid {
 .container {
     width: 90%;
     margin: auto;
+}
+
+.website__grid, .container, .portfolio__grid {
+    max-width: 1250px;
 }
 
 /*                                                                         */
@@ -205,7 +209,7 @@ section:not(.career section):not(.about), .kanap__grid {
 .btn a, .btn {
     font-size: 0.9rem;
 }
-.about .btn, .more .btn, .kanap .btn, .form-res .btn {
+.about .btn, .more .btn, .website .btn, .form-res .btn {
     background-color: #4E7778;
     display: flex;
     align-items: center;
@@ -607,7 +611,7 @@ footer i {
 }
 
 /*                      COMICS                          */
-.box p, .career footer i, .kanap footer i  {
+.box p, .career footer i, .website footer i  {
     color:#006369;
 }
 .comics {
@@ -672,46 +676,49 @@ footer i {
 }
 
 /*                                                                                        */
-/*                                       KANAP PAGE                                       */
+/*                                 LOCAL WEBSITES PAGES                                       */
 /*                                                                                        */
-.kanap main {
+.website main {
     padding-top: 48.78px;
 }
-.kanap h1, .kanap p {
+.website h1, .website p {
     color: white;
 }
-.kanap p {
+.website p {
     font-size: 0.9rem;
 }
 
-.kanap__title {
+.website__title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.kanap .shine-container-btn {
+.website .shine-container-btn {
     width: 38px;
     height: 38px;
     margin: 0 8px 0 8px;
 }
-.kanap .btn {
+.website .btn {
     width: 91%;
     height: 91%;
     justify-content: center;
 }
-.kanap .btn a {
+.website .btn a {
     display: flex;
 }
-.kanap__title .ri-code-s-slash-fill {
+.website__title .ri-code-s-slash-fill {
     font-size: 1.7rem;
     color: white;
 }
-
-/*                      PHOTOS                          */
-.kanap__grid img {
+.website__grid img {
     width: 100%;
     height: 300px;
     object-fit: cover;
+}
+
+/*                      PHOTOS                          */
+.leslie-grid__third img, .leslie-grid__fourth img {
+    object-position: right;
 }
 
 .hidden {
@@ -888,24 +895,27 @@ footer i {
     }
 
     /*                      KANAP PAGE                          */
-    .kanap__grid {
+    .website__grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 15px;
         width: 95%;
         margin: auto;
     }
-    .kanap__grid img {
+    .website__grid img {
         height: 250px;
     }
-    .kanap__grid figure {
+    .website__grid figure {
         width: 100%;
         margin-bottom: 0;
     }
-    .kanap-grid__first {
+    .website-grid__first {
         grid-column: 1 / 3;
         grid-row: 1/2;
+    }
+
+    .kanap__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 15px;
     }
     .kanap-grid__third {
         grid-column: 2 / 3;
@@ -915,6 +925,16 @@ footer i {
     }
     .kanap-grid__third img, .kanap-grid__fifth img {
         object-position: left;
+    }
+
+    /*                      LESLIE PAGE                          */
+    .leslie__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 15px;
+    }
+    .leslie-grid__fourth {
+        grid-column: 1/3;
     }
 }
 
@@ -1241,18 +1261,18 @@ footer i {
     }
 
     /*                      KANAP PAGE                            */
-    .kanap__grid {
+    .website__grid {
         width: 85%;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
     }
-    .kanap-grid__first {
+    .website-grid__first {
         grid-column: 1 / 4;
     }
-    .kanap-grid__second {
+    .website-grid__second {
         grid-row: 2/4;
     }
-    .kanap-grid__second img {
+    .website-grid__second img {
         height: 510px;
         object-position: top;
     }
@@ -1263,9 +1283,15 @@ footer i {
     .kanap-grid__fifth {
         grid-column: 2 / 4;
     }
-    .kanap footer i:hover, .career footer i:hover {
+    .website footer i:hover, .career footer i:hover {
         color: #267B80;
     }
+
+    /*                   LESLIE FESSEL PAGE                        */
+    .leslie-grid__third, .leslie-grid__fourth {
+        grid-column: 2/4;
+    }
+
 }
 
 @media (min-width: 1015px) {
