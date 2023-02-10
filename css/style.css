@@ -587,9 +587,16 @@ footer i {
     background-color: #f2f2f2;
     z-index: 4;
 }
+.job__icones {
+    display: flex;
+    justify-content: space-between;
+}
 .job-div i {
     font-size: 2rem;
     color: #006369;
+}
+.job__icones .ri-close-line {
+    font-size: 1.5rem;
 }
 .job-div li {
     font-size: 0.9rem;
@@ -1160,8 +1167,11 @@ footer i {
     #beginning {
         margin-top: 80px;
     }
+    .twist-container {
+        display: flex;
+        justify-content: flex-end;
+    }
     #twist {
-        margin-left: 15%;
         border-bottom-left-radius: 500px;
     }
     #beginning p, #twist p, #new-start p:not(.comics p) {

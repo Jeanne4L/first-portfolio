@@ -8,23 +8,24 @@
         <title>Sandra Petereau - parcours</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-        <link rel="stylesheet" href="css/style.css">
         <!-- <link rel="stylesheet" href="style.min.css"> -->
+        <link rel="stylesheet" href="css/style.css">
             <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
-            <script src="script.min.js" async></script>
+            <!-- <script src="script.min.js" async></script> -->
+            <script src="js/script.js" async></script>
     </head>
 
     <body class="career">
         <div class="overlay hidden"></div>
-        <main class="bgc-gradient">
+        <main class="bgc-gradient" id="top">
             <header>
                 <div class="container">
-                    <a href="index.html">
+                    <a href="index.html" aria-label="accéder à la page principale">
                         <img src="images/logo.png" alt="logo abstrait représentant la polyvalence" srcset="images/logo.svg">
                     </a>
-                    <i class="ri-close-line hidden"></i>
-                    <i class="ri-menu-line"></i>
+                    <i class="ri-close-line hidden" aria-label="fermer le menu"></i>
+                    <i class="ri-menu-line" aria-label="afficher le menu"></i>
                     <nav class="menu">
                         <ul>
                             <li class="career-grid__first">
@@ -95,149 +96,175 @@
                 </div>
             </section>
             
-            <section id="twist">
-                <h2>Rebondissement <i class="ri-arrow-up-s-fill hidden"></i><i class="ri-arrow-down-s-fill"></i></h2>
-                <img src="images/line-to-left.png" alt="ligne courbe reliant un titre à l'autre" class="line-to-left">
-                <div class="column">
-                    <div class="career__light-parts">
-                        <p>
-                            Après une filière générale et théorique, je me suis tournée vers une voie plus spécialisée et me permettant d’acquérir une expérience professionnelle.
-                            <br>
-                            Encore une fois, j’ai suivi mon instinct d’indécise en puissance pour choisir la filière la plus générale, le <span class="job" id="degree">commerce</span>.
-                        </p>
-                        <div class="job-div degree hidden">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <div class="job__details">
-                                <h3>Bac Pro commerce</h3>
-                                <span>CFA, Blois</span>
+            <div class="twist-container">
+                <section id="twist">
+                    <h2>Rebondissement <i class="ri-arrow-up-s-fill hidden"></i><i class="ri-arrow-down-s-fill"></i></h2>
+                    <img src="images/line-to-left.png" alt="ligne courbe reliant un titre à l'autre" class="line-to-left">
+                    <div class="column">
+                        <div class="career__light-parts">
+                            <p>
+                                Après une filière générale et théorique, je me suis tournée vers une voie plus spécialisée et me permettant d’acquérir une expérience professionnelle.
+                                <br>
+                                Encore une fois, j’ai suivi mon instinct d’indécise en puissance pour choisir la filière la plus générale, le <span class="job" id="degree" tabindex="0">commerce</span>.
+                            </p>
+                            <div class="job-div degree hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal__heading" aria-describedby="modal__date">
+                                <div class="job__icones">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
+                                </div>
+                                <div class="job__details" id="modal__heading">
+                                    <h3>Bac Pro commerce</h3>
+                                    <span>CFA, Blois</span>
+                                </div>
+                                <h4 id="modal__date">2014</h4>
                             </div>
-                            <h4>2014</h4>
-                        </div>
-                        <p>
-                            C’était parti pour deux ans d’apprentissage aux <span class="job" id="super-u">Services U</span> et c’était génial ! Un poste polyvalent, comme moi.
-                            <br>
-                            Mais toute bonne chose a une fin et j’ai continué ma route vers d’autres horizons commerciaux.
-                        </p>
-
-                        <div class="job-div super-u hidden">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <div class="job__details">
-                                <h3>Super U</h3>
-                                <span>Conseillère Services U</span>
-                                <ul>
-                                    <li>Préparation de commandes</li>
-                                    <li>Location de véhicules</li>
-                                </ul>
+                            <p>
+                                C’était parti pour deux ans d’apprentissage aux <span class="job" id="super-u" tabindex="0">Services U</span> et c’était génial ! Un poste polyvalent, comme moi.
+                                <br>
+                                Mais toute bonne chose a une fin et j’ai continué ma route vers d’autres horizons commerciaux.
+                            </p>
+    
+                            <div class="job-div super-u hidden" tabindex="-1" role="dialog" aria-modal="true">
+                                <div class="job__icones">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
+                                </div>
+                                <div class="job__details">
+                                    <h3>Super U</h3>
+                                    <span>Conseillère Services U</span>
+                                    <ul>
+                                        <li>Préparation de commandes</li>
+                                        <li>Location de véhicules</li>
+                                    </ul>
+                                </div>
+                                <h4>2012-2014</h4>
                             </div>
-                            <h4>2012-2014</h4>
-                        </div>
-
-                        <p class="third-p">
-                            La <span class="job" id="foir-fouille">Foir’Fouille</span> puis <span class="job" id="centrakor">Centrakor</span> et enfin <span class="job" id="biocoop">Biocoop</span>. 
-                            <br>
-                            Et comme il ne faut pas se limiter à se qu'on connait, j’ai testé l’entretien minutieux des cottages de <span class="job" id="center-parcs">Center Parcs</span>, le froid glacial du conditionnement de sushis à <span class="job" id="marco-polo">Marco Polo</span> et la chaleur sucrée des gâteaux de <span class="job" id="st-michel">St-Michel</span>.
-                        </p>
-
-                        <div class="job-div foir-fouille hidden">
-                            <i class="fa-solid fa-kitchen-set"></i>
-                            <div class="job__details">
-                                <h3>La Foir'Fouille</h3>
-                                <span>Employée de vente</span>
-                                <ul>
-                                    <li>Implantation des rayons</li>
-                                    <li>Encaissement</li>
-                                </ul>
+    
+                            <p class="third-p">
+                                La <span class="job" id="foir-fouille" tabindex="0">Foir’Fouille</span> puis <span class="job" id="centrakor" tabindex="0">Centrakor</span> et enfin <span class="job" id="biocoop" tabindex="0">Biocoop</span>. 
+                                <br>
+                                Et comme il ne faut pas se limiter à se qu'on connait, j’ai testé l’entretien minutieux des cottages de <span class="job" id="center-parcs" tabindex="0">Center Parcs</span>, le froid glacial du conditionnement de sushis à <span class="job" id="marco-polo" tabindex="0">Marco Polo</span> et la chaleur sucrée des gâteaux de <span class="job" id="st-michel" tabindex="0">St-Michel</span>.
+                            </p>
+    
+                            <div class="job-div foir-fouille hidden" tabindex="-1" role="dialog" aria-modal="true">
+                                <div class="job__icones">
+                                    <i class="fa-solid fa-kitchen-set"></i>
+                                    <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
+                                </div>
+                                <div class="job__details">
+                                    <h3>La Foir'Fouille</h3>
+                                    <span>Employée de vente</span>
+                                    <ul>
+                                        <li>Implantation des rayons</li>
+                                        <li>Encaissement</li>
+                                    </ul>
+                                </div>
+                                <h4>2015</h4>
                             </div>
-                            <h4>2015</h4>
-                        </div>
-                        <div class="job-div centrakor hidden">
-                            <i class="fa-solid fa-couch"></i>
-                            <div class="job__details">
-                                <h3>Centrakor</h3>
-                                <span>Employée de vente</span>
-                                <ul>
-                                    <li>Implantation du magasin</li>
-                                    <li>Gestion de rayon</li>
-                                </ul>
+                            <div class="job-div centrakor hidden" tabindex="-1" role="dialog" aria-modal="true">
+                                <div class="job__icones">
+                                    <i class="fa-solid fa-couch"></i>
+                                    <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
+                                </div>
+                                <div class="job__details">
+                                    <h3>Centrakor</h3>
+                                    <span>Employée de vente</span>
+                                    <ul>
+                                        <li>Implantation du magasin</li>
+                                        <li>Gestion de rayon</li>
+                                    </ul>
+                                </div>
+                                <h4>2018-2019</h4>
                             </div>
-                            <h4>2018-2019</h4>
-                        </div>
-                        <div class="job-div biocoop hidden">
-                            <i class="fa-solid fa-plate-wheat"></i>
-                            <div class="job__details">
-                                <h3>Biocoop</h3>
-                                <span>Employée de rayon</span>
-                                <ul>
-                                    <li>Gestion de rayon</li>
-                                    <li>Réapprovisionnement</li>
-                                </ul>
+                            <div class="job-div biocoop hidden" tabindex="-1" role="dialog" aria-modal="true">
+                                <div class="job__icones">
+                                    <i class="fa-solid fa-plate-wheat"></i>
+                                    <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
+                                </div>
+                                <div class="job__details">
+                                    <h3>Biocoop</h3>
+                                    <span>Employée de rayon</span>
+                                    <ul>
+                                        <li>Gestion de rayon</li>
+                                        <li>Réapprovisionnement</li>
+                                    </ul>
+                                </div>
+                                <h4>2019-2022</h4>
                             </div>
-                            <h4>2019-2022</h4>
-                        </div>
-                        <div class="job-div center-parcs hidden">
-                            <i class="fa-solid fa-water-ladder"></i>
-                            <div class="job__details">
-                                <h3>Center Parcs</h3>
-                                <span>Agent d'entretien</span>
-                                <ul>
-                                    <li>Nettoyage des cottages</li>
-                                </ul>
+                            <div class="job-div center-parcs hidden" tabindex="-1" role="dialog" aria-modal="true">
+                                <div class="job__icones">
+                                    <i class="fa-solid fa-water-ladder"></i>
+                                    <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
+                                </div>
+                                <div class="job__details">
+                                    <h3>Center Parcs</h3>
+                                    <span>Agent d'entretien</span>
+                                    <ul>
+                                        <li>Nettoyage des cottages</li>
+                                    </ul>
+                                </div>
+                                <h4>2016</h4>
                             </div>
-                            <h4>2016</h4>
-                        </div>
-                        <div class="job-div marco-polo hidden">
-                            <i class="fa-solid fa-drum-steelpan"></i>
-                            <div class="job__details">
-                                <h3>Marco Polo</h3>
-                                <span>Agent de conditionnement</span>
-                                <ul>
-                                    <li>Conditionnement des sushis</li>
-                                </ul>
+                            <div class="job-div marco-polo hidden" tabindex="-1" role="dialog" aria-modal="true">
+                                <div class="job__icones">
+                                    <i class="fa-solid fa-drum-steelpan"></i>
+                                    <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
+                                </div>
+                                <div class="job__details">
+                                    <h3>Marco Polo</h3>
+                                    <span>Agent de conditionnement</span>
+                                    <ul>
+                                        <li>Conditionnement des sushis</li>
+                                    </ul>
+                                </div>
+                                <h4>2016-2017</h4>
                             </div>
-                            <h4>2016-2017</h4>
-                        </div>
-                        <div class="job-div st-michel hidden">
-                            <i class="fa-solid fa-cookie"></i>
-                            <div class="job__details">
-                                <h3>St-Michel</h3>
-                                <span>Agent de conditionnement</span>
-                                <ul>
-                                    <li>Conditionnement des gâteaux</li>
-                                    <li>Préparation des palettes</li>
-                                </ul>
+                            <div class="job-div st-michel hidden" tabindex="-1" role="dialog" aria-modal="true">
+                                <div class="job__icones">
+                                    <i class="fa-solid fa-cookie"></i>
+                                    <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
+                                </div>
+                                <div class="job__details">
+                                    <h3>St-Michel</h3>
+                                    <span>Agent de conditionnement</span>
+                                    <ul>
+                                        <li>Conditionnement des gâteaux</li>
+                                        <li>Préparation des palettes</li>
+                                    </ul>
+                                </div>
+                                <h4>2015-2016</h4>
                             </div>
-                            <h4>2015-2016</h4>
-                        </div>
-
-                        <p class="fourth-p">
-                            C’est bien tout ça mais c’est pas ce qui nous intéresse, bah oui c’est un portfolio de développeuse quand même ! 
-                        </p>
-                        <p class="fifth-p">
-                            Pour vous expliquer mon nouveau changement de direction, on doit examiner mon application du principe « la connaissance s’acquiert par l’expérience » dans ma vie privée.
-                        </p>
-                        <p class="sixth-p">
-                            Afin de d’étancher ma soif de connaissances et acquérir de nouvelles compétences, je teste tout. 
-                            <br>
-                            Tir à l’arc, gym, danse, dessin, théâtre, violon, création 3d, animation 2d, trading, langues étrangères… et <span class="job" id="oc">création de sites web</span> !
-                        </p>
-                        <div class="job-div oc hidden">
-                            <i class="fa-solid fa-laptop"></i>
-                            <div class="job__details">
-                                <h3>Prép'Apprentissage</h3>
-                                <span>Openclassrooms</span>
-                                <ul>
-                                    <li>Intégration d'une maquette en HTML/CSS</li>
-                                    <li>Compilation avec Sass</li>
-                                    <li>Optimisation du SEO et de l'accessibilité</li>
-                                    <li>Affichage dynamique avec JS</li>
-                                </ul>
+    
+                            <p class="fourth-p">
+                                C’est bien tout ça mais c’est pas ce qui nous intéresse, bah oui c’est un portfolio de développeuse quand même ! 
+                            </p>
+                            <p class="fifth-p">
+                                Pour vous expliquer mon nouveau changement de direction, on doit examiner mon application du principe « la connaissance s’acquiert par l’expérience » dans ma vie privée.
+                            </p>
+                            <p class="sixth-p">
+                                Afin d’étancher ma soif de connaissances et acquérir de nouvelles compétences, je teste tout. 
+                                <br>
+                                Tir à l’arc, gym, danse, dessin, théâtre, violon, création 3d, animation 2d, trading, langues étrangères… et <span class="job" id="oc" tabindex="0">création de sites web</span> !
+                            </p>
+                            <div class="job-div oc hidden" tabindex="-1" role="dialog" aria-modal="true">
+                                <i class="fa-solid fa-laptop"></i>
+                                <div class="job__details">
+                                    <h3>Prép'Apprentissage</h3>
+                                    <span>Openclassrooms</span>
+                                    <ul>
+                                        <li>Intégration d'une maquette en HTML/CSS</li>
+                                        <li>Compilation avec Sass</li>
+                                        <li>Optimisation du SEO et de l'accessibilité</li>
+                                        <li>Affichage dynamique avec JS</li>
+                                    </ul>
+                                </div>
+                                <h4>05/22-09/22</h4>
                             </div>
-                            <h4>05/22-09/22</h4>
                         </div>
+                        <img src="images/parcours_img/parcours_img2.png" alt="dessin vectoriel d'une hôtesse de caisse"  class="career__illustration">
                     </div>
-                    <img src="images/parcours_img/parcours_img2.png" alt="dessin vectoriel d'une hôtesse de caisse"  class="career__illustration">
-                </div>
-            </section>
+                </section>
+            </div>
 
             <section id="new-start">
                 <h2>Nouveau départ <i class="ri-arrow-up-s-fill hidden"></i><i class="ri-arrow-down-s-fill"></i></h2>

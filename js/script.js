@@ -158,6 +158,7 @@ function checkInputValue() {
     });
 };
 
+
 // display overlay with figcaption
 let figures = document.querySelectorAll('figure');
 
@@ -181,6 +182,7 @@ function displayFigcaption() {
     };
 };
 
+
 // get id of clicked job span and display assigned div
 let jobDetails = document.querySelectorAll('.job');
 
@@ -192,25 +194,47 @@ for(let i=0; i<jobDetails.length; i++) {
 
         let elementId = this.getAttribute('id');
         let div = document.querySelector('.'+ elementId);
+        let closeModalBtn = div.querySelector('.ri-close-line');
 
-        displayJobDivDetails(isDisplayedDiv, div);
+        displayJobDivDetails(isDisplayedDiv, div, closeModalBtn);
     };
 };
 
-function displayJobDivDetails(isDisplayedDiv, div) {
+function displayJobDivDetails(isDisplayedDiv, div, closeModalBtn) {
     overlay.classList.remove('hidden');
     div.classList.remove('hidden');
+    closeModalBtn.focus();
     isDisplayedDiv = true;
 
-    hideJobDivDetails(isDisplayedDiv, div);
+    hideJobDivDetails(isDisplayedDiv, div, closeModalBtn);
 };
 
-function hideJobDivDetails(isDisplayedDiv, div) {
-    document.body.addEventListener('click', ()=> {
-        if(isDisplayedDiv) {
+function hideJobDivDetails(isDisplayedDiv, div, closeModalBtn) {
+    if(isDisplayedDiv) {
+        closeModalBtn.onblur = () => {
+            closeModalBtn.focus();
+        }
+
+        document.onkeydown = function(e) {
+            if (e.key == 'Escape') {
+                overlay.classList.add('hidden');
+                div.classList.add('hidden');
+                isDisplayedDiv = false;
+            }
+        };
+        document.body.addEventListener('click', ()=> {
             overlay.classList.add('hidden');
             div.classList.add('hidden');
-            isOpenedMenu = false;
-        };
-    });
+            isDisplayedDiv = false;
+        });
+        closeModalBtn.addEventListener('click', ()=> {
+            overlay.classList.add('hidden');
+            div.classList.add('hidden');
+            isDisplayedDiv = false;
+        })
+    };
+};
+
+document.onkeydown = function(e) {
+    console.log(e)
 };
