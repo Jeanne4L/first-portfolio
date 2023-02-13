@@ -24,8 +24,8 @@
                     <a href="index.html" aria-label="accéder à la page principale">
                         <img src="images/logo.png" alt="logo abstrait représentant la polyvalence" srcset="images/logo.svg">
                     </a>
-                    <i class="ri-close-line hidden" aria-label="fermer le menu"></i>
-                    <i class="ri-menu-line" aria-label="afficher le menu"></i>
+                    <i class="ri-close-line hidden"></i>
+                    <i class="ri-menu-line"></i>
                     <nav class="menu">
                         <ul>
                             <li class="career-grid__first">
@@ -65,8 +65,9 @@
                 </p>
             </div>
 
+            <a href="#twist" aria-label="passer la partie le commencement"></a>
             <section id="beginning">
-                <h2>Le commencement... <i class="ri-arrow-up-s-fill hidden"></i><i class="ri-arrow-down-s-fill"></i></h2>
+                <h2>Le commencement... <i class="ri-arrow-up-s-fill hidden"></i><i class="ri-arrow-down-s-fill" tabindex="0" aria-label="afficher le contenu" role="button"></i></h2>
                 <img src="images/line-to-right.png" alt="ligne courbe reliant un titre à l'autre" class="line-to-right">
   
                 <div class="column">
@@ -96,9 +97,10 @@
                 </div>
             </section>
             
+            <a href="#new-start" aria-label="passer la partie rebondissement"></a>
             <div class="twist-container">
                 <section id="twist">
-                    <h2>Rebondissement <i class="ri-arrow-up-s-fill hidden"></i><i class="ri-arrow-down-s-fill"></i></h2>
+                    <h2>Rebondissement <i class="ri-arrow-up-s-fill hidden"></i><i class="ri-arrow-down-s-fill" tabindex="0" aria-label="afficher le contenu" role="button"></i></h2>
                     <img src="images/line-to-left.png" alt="ligne courbe reliant un titre à l'autre" class="line-to-left">
                     <div class="column">
                         <div class="career__light-parts">
@@ -107,16 +109,16 @@
                                 <br>
                                 Encore une fois, j’ai suivi mon instinct d’indécise en puissance pour choisir la filière la plus générale, le <span class="job" id="degree" tabindex="0">commerce</span>.
                             </p>
-                            <div class="job-div degree hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal__heading" aria-describedby="modal__date">
+                            <div class="job-div degree hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="degree-modal__content" aria-describedby="degree-modal__date">
                                 <div class="job__icones">
                                     <i class="fa-solid fa-graduation-cap"></i>
                                     <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
                                 </div>
-                                <div class="job__details" id="modal__heading">
+                                <div class="job__details" id="degree-modal__content">
                                     <h3>Bac Pro commerce</h3>
                                     <span>CFA, Blois</span>
                                 </div>
-                                <h4 id="modal__date">2014</h4>
+                                <h4 id="degree-modal__date">2014</h4>
                             </div>
                             <p>
                                 C’était parti pour deux ans d’apprentissage aux <span class="job" id="super-u" tabindex="0">Services U</span> et c’était génial ! Un poste polyvalent, comme moi.
@@ -124,12 +126,12 @@
                                 Mais toute bonne chose a une fin et j’ai continué ma route vers d’autres horizons commerciaux.
                             </p>
     
-                            <div class="job-div super-u hidden" tabindex="-1" role="dialog" aria-modal="true">
+                            <div class="job-div super-u hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="superu-modal__content" aria-describedby="superu-modal__date">
                                 <div class="job__icones">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
                                 </div>
-                                <div class="job__details">
+                                <div class="job__details" id="superu-modal__content">
                                     <h3>Super U</h3>
                                     <span>Conseillère Services U</span>
                                     <ul>
@@ -137,7 +139,7 @@
                                         <li>Location de véhicules</li>
                                     </ul>
                                 </div>
-                                <h4>2012-2014</h4>
+                                <h4 id="superu-modal__date">2012-2014</h4>
                             </div>
     
                             <p class="third-p">
@@ -146,12 +148,12 @@
                                 Et comme il ne faut pas se limiter à se qu'on connait, j’ai testé l’entretien minutieux des cottages de <span class="job" id="center-parcs" tabindex="0">Center Parcs</span>, le froid glacial du conditionnement de sushis à <span class="job" id="marco-polo" tabindex="0">Marco Polo</span> et la chaleur sucrée des gâteaux de <span class="job" id="st-michel" tabindex="0">St-Michel</span>.
                             </p>
     
-                            <div class="job-div foir-fouille hidden" tabindex="-1" role="dialog" aria-modal="true">
+                            <div class="job-div foir-fouille hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="foirfouille-modal__content" aria-describedby="foirfouille-modal__date">
                                 <div class="job__icones">
                                     <i class="fa-solid fa-kitchen-set"></i>
                                     <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
                                 </div>
-                                <div class="job__details">
+                                <div class="job__details" id="foirfouille-modal__content">
                                     <h3>La Foir'Fouille</h3>
                                     <span>Employée de vente</span>
                                     <ul>
@@ -159,14 +161,14 @@
                                         <li>Encaissement</li>
                                     </ul>
                                 </div>
-                                <h4>2015</h4>
+                                <h4 id="foirfouille-modal__date">2015</h4>
                             </div>
-                            <div class="job-div centrakor hidden" tabindex="-1" role="dialog" aria-modal="true">
+                            <div class="job-div centrakor hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="centrakor-modal__content" aria-describedby="centrakor-modal__date">
                                 <div class="job__icones">
                                     <i class="fa-solid fa-couch"></i>
                                     <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
                                 </div>
-                                <div class="job__details">
+                                <div class="job__details" id="centrakor-modal__content">
                                     <h3>Centrakor</h3>
                                     <span>Employée de vente</span>
                                     <ul>
@@ -174,14 +176,14 @@
                                         <li>Gestion de rayon</li>
                                     </ul>
                                 </div>
-                                <h4>2018-2019</h4>
+                                <h4 id="centrakor-modal__date">2018-2019</h4>
                             </div>
-                            <div class="job-div biocoop hidden" tabindex="-1" role="dialog" aria-modal="true">
+                            <div class="job-div biocoop hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="biocoop-modal__content" aria-describedby="biocoop-modal__date">
                                 <div class="job__icones">
                                     <i class="fa-solid fa-plate-wheat"></i>
                                     <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
                                 </div>
-                                <div class="job__details">
+                                <div class="job__details" id="biocoop-modal__content">
                                     <h3>Biocoop</h3>
                                     <span>Employée de rayon</span>
                                     <ul>
@@ -189,42 +191,42 @@
                                         <li>Réapprovisionnement</li>
                                     </ul>
                                 </div>
-                                <h4>2019-2022</h4>
+                                <h4 id="biocoop-modal__date">2019-2022</h4>
                             </div>
-                            <div class="job-div center-parcs hidden" tabindex="-1" role="dialog" aria-modal="true">
+                            <div class="job-div center-parcs hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="centerparcs-modal__content" aria-describedby="centerparcs-modal__date">
                                 <div class="job__icones">
                                     <i class="fa-solid fa-water-ladder"></i>
                                     <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
                                 </div>
-                                <div class="job__details">
+                                <div class="job__details" id="centerparcs-modal__content">
                                     <h3>Center Parcs</h3>
                                     <span>Agent d'entretien</span>
                                     <ul>
                                         <li>Nettoyage des cottages</li>
                                     </ul>
                                 </div>
-                                <h4>2016</h4>
+                                <h4 id="centerparcs-modal__date">2016</h4>
                             </div>
-                            <div class="job-div marco-polo hidden" tabindex="-1" role="dialog" aria-modal="true">
+                            <div class="job-div marco-polo hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="marcopolo-modal__content" aria-describedby="marcopolo-modal__date">
                                 <div class="job__icones">
                                     <i class="fa-solid fa-drum-steelpan"></i>
                                     <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
                                 </div>
-                                <div class="job__details">
+                                <div class="job__details" id="marcopolo-modal__content">
                                     <h3>Marco Polo</h3>
                                     <span>Agent de conditionnement</span>
                                     <ul>
                                         <li>Conditionnement des sushis</li>
                                     </ul>
                                 </div>
-                                <h4>2016-2017</h4>
+                                <h4 id="marcopolo-modal__date">2016-2017</h4>
                             </div>
-                            <div class="job-div st-michel hidden" tabindex="-1" role="dialog" aria-modal="true">
+                            <div class="job-div st-michel hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="stmichel-modal__content" aria-describedby="stmichel-modal__date">
                                 <div class="job__icones">
                                     <i class="fa-solid fa-cookie"></i>
                                     <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
                                 </div>
-                                <div class="job__details">
+                                <div class="job__details" id="stmichel-modal__content">
                                     <h3>St-Michel</h3>
                                     <span>Agent de conditionnement</span>
                                     <ul>
@@ -232,7 +234,7 @@
                                         <li>Préparation des palettes</li>
                                     </ul>
                                 </div>
-                                <h4>2015-2016</h4>
+                                <h4 id="stmichel-modal__date">2015-2016</h4>
                             </div>
     
                             <p class="fourth-p">
@@ -246,9 +248,12 @@
                                 <br>
                                 Tir à l’arc, gym, danse, dessin, théâtre, violon, création 3d, animation 2d, trading, langues étrangères… et <span class="job" id="oc" tabindex="0">création de sites web</span> !
                             </p>
-                            <div class="job-div oc hidden" tabindex="-1" role="dialog" aria-modal="true">
-                                <i class="fa-solid fa-laptop"></i>
-                                <div class="job__details">
+                            <div class="job-div oc hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="oc-modal__content" aria-describedby="oc-modal__date">
+                                <div class="job__icones">
+                                    <i class="fa-solid fa-laptop"></i>
+                                    <i class="ri-close-line" tabindex="0" aria-label="fermer la fenêtre"></i>
+                                </div>
+                                <div class="job__details" id="oc-modal__content">
                                     <h3>Prép'Apprentissage</h3>
                                     <span>Openclassrooms</span>
                                     <ul>
@@ -258,7 +263,7 @@
                                         <li>Affichage dynamique avec JS</li>
                                     </ul>
                                 </div>
-                                <h4>05/22-09/22</h4>
+                                <h4 id="oc-modal__date">05/22-09/22</h4>
                             </div>
                         </div>
                         <img src="images/parcours_img/parcours_img2.png" alt="dessin vectoriel d'une hôtesse de caisse"  class="career__illustration">
@@ -267,7 +272,7 @@
             </div>
 
             <section id="new-start">
-                <h2>Nouveau départ <i class="ri-arrow-up-s-fill hidden"></i><i class="ri-arrow-down-s-fill"></i></h2>
+                <h2>Nouveau départ <i class="ri-arrow-up-s-fill hidden"></i><i class="ri-arrow-down-s-fill" tabindex="0" aria-label="afficher le contenu" role="button"></i></h2>
                 <img src="images/line-to-right.png" alt="ligne courbe reliant un titre à l'autre" class="line-to-right">
                 <div class="column">
                     <div class="career__light-parts">
@@ -311,7 +316,7 @@
                             </div>
                         </div>
                         <p>Écrirez-vous le prochain chapitre ?</p>
-                        <div class="shine-container-btn shine-container-btn--circle">
+                        <div class="shine-container-btn shine-container-btn--circle" role="button">
                             <div class="border-btn border-btn--circle">
                                 <div class="btn btn--circle">
                                     <a href="index.html#contact">

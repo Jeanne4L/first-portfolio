@@ -69,7 +69,7 @@
                 ?>
             </p>
 
-            <div class="shine-container-btn shine-container-btn--circle">
+            <div class="shine-container-btn shine-container-btn--circle" role="button">
                 <div class="border-btn border-btn--circle">
                     <div class="btn btn--circle">
                         <a href="../index.html">
