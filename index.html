@@ -9,7 +9,6 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
         <link rel="stylesheet" href="style.min.css">
-            <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
             <script src="script.min.js" async></script>
     </head>
@@ -19,11 +18,11 @@
         <section class="about bgc-gradient" id="top">
             <header>
                 <div class="container">
-                    <a href="index.html" aria-label="recharger la page">
-                        <img src="images/logo.png" alt="logo abstrait représentant la polyvalence" srcset="images/logo.svg">
+                    <a href="index.min.html" aria-label="recharger la page">
+                        <img src="images/logo.webp" alt="logo abstrait représentant la polyvalence" srcset="images/logo.svg">
                     </a>
-                    <i class="ri-close-line hidden"></i>
-                    <i class="ri-menu-line"></i>
+                    <i class="close-cross hidden"></i>
+                    <i class="menu-icon"></i>
                     <nav class="menu">
                         <ul>
                             <li class="grid__first">
@@ -50,8 +49,8 @@
             </header>
 
             <div class="img-container">
-                <img src="images/profile-picture.jpg" alt="photo de Sandra Petereau" class="profile-photo">
-                <img src="images/profile-drawing.png" alt="dessin vectoriel d'une femme qui code" class="profile-drawing">
+                <img src="images/profile__photo.webp" alt="photo de Sandra Petereau" class="profile-photo">
+                <img src="images/profile__drawing.webp" alt="dessin vectoriel d'une femme qui code" class="profile-drawing">
             </div>
             <div class="container center">
                 <h1>Sandra Petereau</h1>
@@ -74,7 +73,7 @@
                 <a href="https://jeanne4l.github.io/oc-booki/" aria-label="Aller sur le site Booki">
                     <figure>
                         <div class="img-container">
-                            <img src="images/projects-render/booki.png" alt="captures d'écran du site Booki">
+                            <img src="images/projects-render/booki.webp" alt="captures d'écran du site Booki">
                             <div class="languages">
                                 <i class="fa-brands fa-html5"></i>
                                 <i class="fa-brands fa-css3-alt"></i>
@@ -89,7 +88,7 @@
                 <a href="https://jeanne4l.github.io/oc-oh-my-food/" aria-label="Aller sur le site Oh my food">
                     <figure>
                         <div class="img-container">
-                            <img src="images/projects-render/ohmyfood.png" alt="captures d'écran du site Oh my food">
+                            <img src="images/projects-render/ohmyfood.webp" alt="captures d'écran du site Oh my food">
                             <div class="languages">
                                 <i class="fa-brands fa-sass"></i>
                             </div>
@@ -103,7 +102,7 @@
                 <a href="https://jeanne4l.github.io/oc-la-panthere/" aria-label="Aller sur le site La panthère">
                     <figure>
                         <div class="img-container">
-                            <img src="images/projects-render/la-panthere.png" alt="captures d'écran du site La panthère">
+                            <img src="images/projects-render/la-panthere.webp" alt="captures d'écran du site La panthère">
                             <div class="languages">
                                 <i class="fa-solid fa-eye"></i>
                                 <i class="fa-solid fa-person"></i>
@@ -118,7 +117,7 @@
                 <a href="kanap.html" aria-label="Aller sur la page du site Kanap">
                     <figure>
                         <div class="img-container">
-                            <img src="images/projects-render/kanap.png" alt="captures d'écran du site Kanap">
+                            <img src="images/projects-render/kanap.webp" alt="captures d'écran du site Kanap">
                             <div class="languages">
                                 <i class="fa-brands fa-js"></i>
                             </div>
@@ -132,7 +131,7 @@
                 <a href="https://codepen.io/Jeanne4L/pen/RwJPQbP?editors=0010" aria-label="Voir l'application météo sur Codepen">
                     <figure>
                         <div class="img-container">
-                            <img src="images/projects-render/weather-app.png" alt="captures d'écran d'une application météo">
+                            <img src="images/projects-render/weather-app.webp" alt="captures d'écran d'une application météo">
                             <div class="languages">
                                 <i class="fa-brands fa-js"></i>
                             </div>
@@ -146,7 +145,7 @@
                 <a href="https://www.mil-mo.fr/" aria-label="Aller sur le site Mil'mo">
                     <figure>
                         <div class="img-container">
-                            <img src="images/projects-render/milmo.png" alt="captures d'écran du site Mil'mo">
+                            <img src="images/projects-render/milmo.webp" alt="captures d'écran du site Mil'mo">
                             <div class="languages">
                                 <i class="fa-brands fa-wordpress-simple"></i>
                             </div>
@@ -160,7 +159,7 @@
                 <a href="leslie-fessel.html" class="seventh-project" aria-label="Aller sur la page du site de Leslie Fessel">
                     <figure>
                         <div class="img-container">
-                            <img src="images/projects-render/leslie-fessel.png" alt="captures d'écran du site de Leslie Fessel (psychomotricienne)">
+                            <img src="images/projects-render/leslie-fessel.webp" alt="captures d'écran du site de Leslie Fessel (psychomotricienne)">
                             <div class="languages">
                                 <i class="fa-brands fa-php"></i>
                             </div>
@@ -212,17 +211,15 @@
         </section>
 
         <a href="#top" aria-label="retour haut de page">
-            <div class="anchor-top hidden">
-                <i class="ri-arrow-up-s-line"></i>
-            </div>
+            <i class="chevron-up hidden"></i>
         </a>
 
         <footer class="center">
             <a href="https://github.com/Jeanne4L" target="_blank" aria-label="lien github">
-                <i class="ri-github-fill"></i>
+                <i class="fa-brands fa-github"></i>
             </a>
             <a href="mailto:sandra.petereau@outlook.fr" aria-label="lien envoi email">
-                <i class="ri-mail-fill"></i>
+                <i class="fa-solid fa-envelope"></i>
             </a>
         </footer>
     </body>

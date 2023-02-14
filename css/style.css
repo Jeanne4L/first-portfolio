@@ -90,6 +90,7 @@
          url('../fonts/tafa/tafa-regular-webfont.svg#afta_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -221,6 +222,119 @@ section:not(.career section):not(.about), .website__grid {
     width: 99%;
     margin-top: 8px;
 }
+/*                              ICONS                             */
+/*                        MENU                         */
+.menu-icon {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 18px;
+    height: 10px;
+}
+.menu-icon::after,
+.menu-icon::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    height: 2px;
+}
+.menu-icon::before {
+    width: 18px;
+    background: currentColor;
+    box-shadow: 0 -6px 0,0 -12px 0;
+    bottom: 0;
+}
+
+.close-cross {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+}
+.close-cross::after,
+.close-cross::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    top: 8px;
+    left: 1px;
+}  
+.close-cross::after {
+    transform: rotate(-45deg);
+} 
+/*                        ARROWS                         */
+.arrow {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    margin-left: 15px;
+}
+.arrow-down {
+    border-top: 6px solid white;
+}
+.arrow-up {
+    border-bottom: 6px solid white;
+}
+
+.chevron-up {
+    position: fixed;
+    bottom: 98px;
+    right: 15px;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #0E3E40;
+    border-radius: 4px;
+}
+.chevron-up::after {
+    content: "";
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    border-top: 3px solid #0E3E40;
+    border-right: 3px solid #0E3E40;
+    transform: rotate(-45deg);
+    left: 22.5%;
+    bottom: 5%;
+} 
+
+.code-slash {
+    transform: rotate(15deg);
+    width: 2px;
+    height: 16px;
+    background: white
+}
+.code-slash::after,
+.code-slash::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    transform: rotate(-60deg)
+}
+.code-slash::before {
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    left: -8px;
+    top: 5px
+}
+.code-slash::after {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    right: -8px;
+    top: 3px
+} 
+
 
 /*                                                                                     */
 /*                                      INDEX PAGE                                     */
@@ -254,7 +368,7 @@ header i {
     color: #F2F2F2;
     font-size: 1.3rem;
 }
-.ri-close-line {
+.close-cross {
     font-size: 1.5rem;
 }
 
@@ -358,8 +472,6 @@ figure .img-container {
     position: absolute;
     bottom: 10px;
     right: 10px;
-}
-.languages {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -411,23 +523,16 @@ form p {
 }
 
 /*                                       RETURN TOP                                      */
-.anchor-top {
+/* .anchor-top {
     border: solid 2px #0E3E40;
     border-radius: 50px;
-    width: 40px;
-    height: 40px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    bottom: 100px;
-    right: 15px;
-    z-index: 2;
-}
-.ri-arrow-up-s-line {
-    font-size: 2.1rem;
-    color: #0E3E40;
-}
+
+} */
+
 
 /*                                            FOOTER                                     */
 footer {
@@ -486,19 +591,21 @@ footer i {
 /*                                                                                         */
 /*                                         CAREER PAGE                                     */
 /*                                                                                         */
-.career a:not(.menu a), .career h1, .career h2, .career p, .career .ri-arrow-up-s-fill, .career .ri-arrow-down-s-fill {
+.career a:not(.menu a), .career h1, .career h2, .career p {
     color: white;
 }
 #twist span {
     color: #015459;
 }
-#twist span:hover, header i:hover, .career .ri-arrow-up-s-fill:hover, .career .ri-arrow-down-s-fill:hover {
+#twist span:hover, header i:hover, .career h2 i:hover {
     cursor: pointer;
 }
 .career h2 {
     font-size: 2.3rem;
     width: 90%;
     margin: auto;
+    display: flex;
+    align-items: center;
 }
 .career h2 i {
     font-size: 1.2rem;
@@ -533,7 +640,7 @@ footer i {
     text-align: left;
 }
 #twist h2, .to-be-continued {
-    text-align: right;
+    justify-content: flex-end;
 }
 #beginning p, #twist p, #new-start p:not(.box p):not(.comics + p) {
     text-align: justify;
@@ -595,7 +702,7 @@ footer i {
     font-size: 2rem;
     color: #006369;
 }
-.job__icones .ri-close-line {
+.job__icones .close-cross {
     font-size: 1.5rem;
 }
 .job-div li {
@@ -636,7 +743,7 @@ footer i {
     margin: auto;
     background-color: #F2F2F2;
     padding: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     position: relative;
 }
 .box1, .box3 {
@@ -750,7 +857,7 @@ footer i {
     header {
         padding: 15px 0;
     }
-    header .ri-close-line, header .ri-menu-line {
+    header .close-cross, header .ri-menu-line, header .menu-icon {
         display: none;
     }
     .menu {
@@ -1065,7 +1172,7 @@ footer i {
     .about h1, .career h1 {
         font-size: clamp(3.5rem, 0.125rem + 6vw, 5rem);
     }
-    .about h2:not(.career h2) {
+    .about h2 {
         font-size: clamp(3rem, -0.375rem + 6vw, 4.5rem);
     }
     .career h2 {

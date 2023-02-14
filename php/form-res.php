@@ -82,10 +82,10 @@
 
         <footer class="center">
             <a href="https://github.com/Jeanne4L" target="_blank">
-                <i class="ri-github-fill"></i>
+                <i class="fa-brands fa-github"></i>
             </a>
             <a href="mailto:sandra.petereau@outlook.fr">
-                <i class="ri-mail-fill"></i>
+                <i class="fa-solid fa-envelope"></i>
             </a>
         </footer>
     </body>

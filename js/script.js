@@ -1,12 +1,11 @@
-let closeMenuBtn = document.querySelector('.ri-close-line');
-let openMenuBtn = document.querySelector('.ri-menu-line');
+let closeMenuBtn = document.querySelector('.close-cross');
+let openMenuBtn = document.querySelector('.menu-icon');
 let menu = document.querySelector('.menu');
 let overlay = document.querySelector('.overlay');
-let downArrows = document.querySelectorAll('.ri-arrow-down-s-fill');
-let upArrows = document.querySelectorAll('.ri-arrow-up-s-fill');
+let downArrows = document.querySelectorAll('.arrow-down');
+let upArrows = document.querySelectorAll('.arrow-up');
 let header = document.querySelector('header');
-let anchor = document.querySelector('.anchor-top');
-
+let anchor = document.querySelector('.chevron-up');
 
 // display and hide menu
 if(openMenuBtn) {
@@ -194,7 +193,7 @@ for(let i=0; i<jobDetails.length; i++) {
 
         let elementId = this.getAttribute('id');
         let div = document.querySelector('.'+ elementId);
-        let closeModalBtn = div.querySelector('.ri-close-line');
+        let closeModalBtn = div.querySelector('.close-cross');
 
         displayJobDivDetails(isDisplayedDiv, div, closeModalBtn);
     };
@@ -210,11 +209,12 @@ function displayJobDivDetails(isDisplayedDiv, div, closeModalBtn) {
 };
 
 function hideJobDivDetails(isDisplayedDiv, div, closeModalBtn) {
+    // keep focus into div
     if(isDisplayedDiv) {
         closeModalBtn.onblur = () => {
             closeModalBtn.focus();
         }
-
+        // close div with escape key, close button or click off the div
         document.onkeydown = function(e) {
             if (e.key == 'Escape') {
                 overlay.classList.add('hidden');
@@ -233,8 +233,4 @@ function hideJobDivDetails(isDisplayedDiv, div, closeModalBtn) {
             isDisplayedDiv = false;
         })
     };
-};
-
-document.onkeydown = function(e) {
-    console.log(e)
 };
